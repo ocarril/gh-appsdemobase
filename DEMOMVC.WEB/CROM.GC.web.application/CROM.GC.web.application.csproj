@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1EC4BEE-6182-4FB5-AF32-4D7FB656117D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CROM.GC.web.application</RootNamespace>
+    <AssemblyName>CROM.GC.web.application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PublishDatabases>false</PublishDatabases>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\bootstrap.css" />
+    <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\css\images\animated-overlay.gif" />
+    <Content Include="content\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="content\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="content\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="content\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="content\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="content\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="content\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="content\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="content\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="content\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="content\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="content\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="content\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="content\css\jquery-ui-1.10.4.custom.css" />
+    <Content Include="content\css\ui.jqgrid.css" />
+    <Content Include="content\css\Views\PostVentaST\rutatrabajomap.css" />
+    <Content Include="content\data\FormatList.XML" />
+    <Content Include="content\DropdownMenuExtra.css" />
+    <Content Include="content\EncuestaPregunta.css" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\images\ActivKO.png" />
+    <Content Include="content\images\ActivOK.png" />
+    <Content Include="content\images\Annulled.png" />
+    <Content Include="content\images\Calender.png" />
+    <Content Include="content\images\Cancel.png" />
+    <Content Include="content\images\imgClean.png" />
+    <Content Include="content\images\imgDemoSystem_Logo.png" />
+    <Content Include="content\images\imgDescargarDRC.png" />
+    <Content Include="content\images\imgDescargarPDF1.png" />
+    <Content Include="content\images\imgDescargarXML.png" />
+    <Content Include="content\images\imgDocSunat.svg" />
+    <Content Include="content\images\imgDocumDarBaja.png" />
+    <Content Include="content\images\imgDocumenCopy.png" />
+    <Content Include="content\images\imgDocumento.svg" />
+    <Content Include="content\images\imgEditar.svg" />
+    <Content Include="content\images\imgExit.png" />
+    <Content Include="content\images\imgFinanciero.svg" />
+    <Content Include="content\images\imgFind02.png" />
+    <Content Include="content\images\FondoGestionComercial.png" />
+    <Content Include="content\images\GCsystem.ico" />
+    <Content Include="content\images\GTMND001.png" />
+    <Content Include="content\images\GTMND002.png" />
+    <Content Include="content\images\imgBloqueado.png" />
+    <Content Include="content\images\icoCalendar.gif" />
+    <Content Include="content\images\icoEditar.png" />
+    <Content Include="content\images\icoEliminaGris.png" />
+    <Content Include="content\images\icoEliminar.png" />
+    <Content Include="content\images\icono.png" />
+    <Content Include="content\images\imgGuardarArchivo.png" />
+    <Content Include="content\images\imgImpuesto.png" />
+    <Content Include="content\images\imgImpuesto.svg" />
+    <Content Include="content\images\imgPago.svg" />
+    <Content Include="content\images\imgTurno.png" />
+    <Content Include="content\images\imgTurno.svg" />
+    <Content Include="content\images\imgUndoDocumen.png" />
+    <Content Include="content\images\imgVerDetalle.png" />
+    <Content Include="content\images\imgAbout.png" />
+    <Content Include="content\images\imgAlarm.png" />
+    <Content Include="content\images\imgAlternativa.jpg" />
+    <Content Include="content\images\imgAprobar.png" />
+    <Content Include="content\images\imgBlanco.JPG" />
+    <Content Include="content\images\imgDescargarPDF.png" />
+    <Content Include="content\images\imgDocSunat.png" />
+    <Content Include="content\images\imgDocumento.png" />
+    <Content Include="content\images\imgContact.png" />
+    <Content Include="content\images\imgDocContrato.png" />
+    <Content Include="content\images\imgDashboard.png" />
+    <Content Include="content\images\imgDeposito.png" />
+    <Content Include="content\images\imgDocumEstado.png" />
+    <Content Include="content\images\imgEjecutar.png" />
+    <Content Include="content\images\imgEmpleado.png" />
+    <Content Include="content\images\imgEncuesta.png" />
+    <Content Include="content\images\imgEncuestas.png" />
+    <Content Include="content\images\imgEquipoFalla.png" />
+    <Content Include="content\images\imgFeriado.png" />
+    <Content Include="content\images\imgFiles.png" />
+    <Content Include="content\images\imgFilesPlanos.png" />
+    <Content Include="content\images\imgImportarDato.png" />
+    <Content Include="content\images\imgImportarExcel.png" />
+    <Content Include="content\images\imgDocNotaDebito.png" />
+    <Content Include="content\images\imgInicio.png" />
+    <Content Include="content\images\imgLlamada.png" />
+    <Content Include="content\images\imgMail.png" />
+    <Content Include="content\images\imgMapaRuta.png" />
+    <Content Include="content\images\imgMapMarker.png" />
+    <Content Include="content\images\imgDocNotaCredito.png" />
+    <Content Include="content\images\imgMarca.png" />
+    <Content Include="content\images\imgOptions.png" />
+    <Content Include="content\images\imgPersona.png" />
+    <Content Include="content\images\imgPregunta.jpg" />
+    <Content Include="content\images\imgDocPresupuesto.png" />
+    <Content Include="content\images\imgProducto.png" />
+    <Content Include="content\images\imgReports.png" />
+    <Content Include="content\images\imgRols.png" />
+    <Content Include="content\images\imgRolUser.png" />
+    <Content Include="content\images\imgRutaTrabajo.png" />
+    <Content Include="content\images\imgSalida.png" />
+    <Content Include="content\images\imgSalir.png" />
+    <Content Include="content\images\imgSave.png" />
+    <Content Include="content\images\imgSettings.png" />
+    <Content Include="content\images\imgDocSolicitar.png" />
+    <Content Include="content\images\imgSystems.png" />
+    <Content Include="content\images\imgTabMaestras.png" />
+    <Content Include="content\images\imgTipoCambio.png" />
+    <Content Include="content\images\imgTipoPregunta.jpg" />
+    <Content Include="content\images\imgUsers.png" />
+    <Content Include="content\images\imgVerDocum.png" />
+    <Content Include="content\images\imgVisitas.png" />
+    <Content Include="content\images\img_ajax.gif" />
+    <Content Include="content\images\logoSunat.png" />
+    <Content Include="content\images\New.png" />
+    <Content Include="content\images\Ok.png" />
+    <Content Include="content\images\OKChecked.png" />
+    <Content Include="content\images\Pagos.png" />
+    <Content Include="content\images\Personal.png" />
+    <Content Include="content\images\PointMurdoch.png" />
+    <Content Include="content\images\RefreshS.png" />
+    <Content Include="content\images\Right01.png" />
+    <Content Include="content\images\SinImagenPer.png" />
+    <Content Include="content\images\UserSesion.png" />
+    <Content Include="content\images\View.png" />
+    <Content Include="content\js\app.js" />
+    <Content Include="content\js\util.js" />
+    <Content Include="content\login.css" />
+    <Content Include="content\logos\20168549564.png" />
+    <Content Include="content\site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="packages.config" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="scripts\js\Helper\AjaxHelper.js" />
+    <Content Include="scripts\js\Helper\JavaScript.js" />
+    <Content Include="scripts\js\Helper\CROMUtil.js" />
+    <Content Include="scripts\js\Helper\DateTimeHelper.js" />
+    <Content Include="scripts\js\Helper\General.js" />
+    <Content Include="scripts\js\Helper\HtmlGenerator.js" />
+    <Content Include="scripts\js\Helper\json2.js" />
+    <Content Include="scripts\js\Helper\LocalStorageHelper.js" />
+    <Content Include="scripts\js\Helper\Modal.js" />
+    <Content Include="scripts\js\Helper\ModalHelper.js" />
+    <Content Include="scripts\js\Helper\UploadHelper.js" />
+    <Content Include="scripts\js\Helper\Validator.js" />
+    <Content Include="scripts\js\Jqfile\jquery.fileupload-process.js" />
+    <Content Include="scripts\js\Jqfile\jquery.fileupload-validate.js" />
+    <Content Include="scripts\js\Jqfile\jquery.fileupload.js" />
+    <Content Include="scripts\js\Jqfile\jquery.iframe-transport.js" />
+    <Content Include="scripts\js\jqgridExcelExportClientSide-libs.js" />
+    <Content Include="scripts\js\jqgridExcelExportClientSide.js" />
+    <Content Include="scripts\js\Jqgrid\grid.locale-en.js" />
+    <Content Include="scripts\js\Jqgrid\grid.locale-es.js" />
+    <Content Include="scripts\js\Jqgrid\jquery.jqGrid.js" />
+    <Content Include="scripts\js\jquery-1.10.2.js" />
+    <Content Include="scripts\js\jquery-1.10.2.min.js" />
+    <Content Include="scripts\js\jquery-ui-1.10.4.custom.js" />
+    <Content Include="scripts\js\jquery-ui-timepicker-addon.js" />
+    <Content Include="scripts\js\jquery.blockUI.js" />
+    <Content Include="scripts\js\jquery.cookie.js" />
+    <Content Include="scripts\js\jquery.ui.datepicker-es.js" />
+    <Content Include="scripts\js\MensajeCarga\Imagenes\Cargando.gif" />
+    <Content Include="scripts\js\MensajeCarga\MensajeCarga.css" />
+    <Content Include="scripts\js\MensajeCarga\MensajeCarga.js" />
+    <Content Include="scripts\js\MessageBox\MessageBox.css" />
+    <Content Include="scripts\js\MessageBox\MessageBox.js" />
+    <Content Include="scripts\js\MessageBox\MessageBoxX.css" />
+    <Content Include="scripts\js\Otros\moment-with-locales.js" />
+    <Content Include="scripts\knockout-3.4.0.debug.js" />
+    <Content Include="scripts\knockout-3.4.0.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\oms.min.js" />
+    <Content Include="scripts\respond.js" />
+    <Content Include="scripts\respond.min.js" />
+    <Content Include="scripts\toastr\toastr.min.css" />
+    <Content Include="scripts\toastr\toastr.min.js" />
+    <Content Include="scripts\Views\AccesoCuenta\Login.js" />
+    <Content Include="scripts\Views\Comercial\TipoCambioReg.js" />
+    <Content Include="scripts\Views\Comercial\TipoCambio.js" />
+    <Content Include="scripts\Views\Configuracion\IndexReg.js" />
+    <Content Include="scripts\Views\Configuracion\Index.js" />
+    <Content Include="scripts\Views\Comercial\DocumentoEstado.js" />
+    <Content Include="scripts\Views\Errores\Errores.js" />
+    <Content Include="scripts\Views\home\index.js" />
+    <Content Include="scripts\Views\Shared\_Layout.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="views\_ViewStart.cshtml" />
+    <Content Include="views\Home\About.cshtml" />
+    <Content Include="views\Home\Index.cshtml" />
+    <Content Include="views\Shared\Error.cshtml" />
+    <Content Include="views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="views\Shared\_Layout.cshtml" />
+    <Content Include="views\Web.config" />
+    <Content Include="views\Comercial\DocumentoEstado.cshtml" />
+    <Content Include="views\Comercial\TipoCambio.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\Configuracion\IndexReg.cshtml" />
+    <Content Include="views\Comercial\TipoCambioReg.cshtml" />
+    <Content Include="scripts\toastr\desktop.ini" />
+    <Content Include="views\Errores\Errores.cshtml" />
+    <Content Include="views\Errores\Index.cshtml" />
+    <Content Include="views\Errores\_ErrorPage.cshtml" />
+    <None Include="Properties\PublishProfiles\Public_DesaMVC.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\FilesOI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="views\Configuracion\Index.cshtml" />
+    <Content Include="views\Shared\_VersionPartial.cshtml" />
+    <Content Include="views\Shared\_SistemaPartial.cshtml" />
+    <Content Include="views\AccesoCuenta\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CROM.GC.Controllers\CROM.GC.Controllers.csproj">
+      <Project>{79e2e07c-aa96-413d-8135-9f89a99c325e}</Project>
+      <Name>CROM.GC.Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CROM.GC.Models\CROM.GC.Models.csproj">
+      <Project>{02cdd6db-c4a7-407e-a278-b1018a74bf59}</Project>
+      <Name>CROM.GC.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Demo.Tools\System.Demo.Tools.csproj">
+      <Project>{e9e2c3c1-14e0-48bd-b84d-8f00431ca426}</Project>
+      <Name>System.Demo.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8193</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8195/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

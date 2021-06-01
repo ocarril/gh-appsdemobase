@@ -1,0 +1,172 @@
+﻿@************************************************************************
+         Archivo    : TipoCambioReg.cshtml
+         Propósito  : Vista para el listado de TIPOS DE CAMBIO
+         Se asume   : N/A
+         Efectos    : N/A
+         Notas      : N/A
+         Autor      : 
+         Fecha/Hora de Creación :
+         Fecha/Hora Modificado  :
+    ************************************************************************@
+@{
+    ViewBag.Title = "Tipo de cambio";
+    Layout = @Url.Content("~/Views/Shared/_Layout.cshtml");
+}
+
+<script src="@Url.Content("~/scripts/views/comercial/tipocambioreg.js")" type="text/javascript"></script>
+
+<div class="panel panel-primary" id="dataForm">
+    <h3 class="panel-heading">Registro de tipos de cambio</h3>
+
+    <div class="checkbox margin_zero">
+        <div class="row">
+            <div class="col-md-1">
+                <input type="button" class="btn btn-info" name="btnGuardar" id="btnGuardar" value="Guardar" title="Guardar registro" />
+            </div>
+            <div class="col-md-1">
+                <input type="button" class="btn btn-info" name="btnRegresar" id="btnRegresar" value="Regresar" title="Regresar al listado" />
+            </div>
+            <div class="col-md-6">
+                <label class="control-label">
+                    Buscar tipo cambio:
+
+                    <a target="_blank" href="@ViewBag.webTipoCambio" title="" @ViewBag.webTipoCambio ">
+                        Tipo de Cambio SUNAT (Hacer click aqui)
+                    </a>
+                </label>
+            </div>
+            <div class="col-md-2">
+                <input type="button" class="btn btn-success" name="btnObtenerUltimo" id="btnObtenerUltimo" value="Obtener último TC" title="Obtener último tipo de cambio registrado" style="width:150px;" />
+            </div>
+            <div class="col-md-2">
+                <input type="text" id="txtfecProcesoUltimo" name="txtfecProcesoUltimo"
+                       maxlength="10" style="width:120px"
+                       placeholder="Fecha de proceso" class="form-control" disabled />
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12" id="loginForm">
+
+                <div class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtfecProceso">
+                            Fecha proceso:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtfecProceso" name="txtfecProceso"
+                                   maxlength="10" style="width:120px"
+                                   placeholder="Fecha de proceso" class="form-control" />
+                        </div>
+                        <label class="col-md-2 control-label" for="cbocodRegMoneda">
+                            Moneda:
+                        </label>
+                        <div class="col-md-4">
+                            <select id="cbocodRegMoneda" name="cbocodRegMoneda" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtmonVentaGOB">Valor Venta GOB:</label>
+                        <div class="col-md-4">
+                            <input type="number" id="txtmonVentaGOB" name="txtmonVentaGOB"
+                                   placeholder="Valor venta SUNAT" maxlength="10"
+                                   title="Valor de venta GOB-SUNAT" class="form-control"
+                                   onkeypress="return $.f_validaInput(1, event, true ,' ')" />
+                        </div>
+
+                        <label class="col-md-2 control-label" for="txtmonCompraGOB">Valor Costo GOB:</label>
+                        <div class="col-md-4">
+                            <input type="number" id="txtmonCompraGOB" name="txtmonCompraGOB"
+                                   placeholder="Valor Costo SUNAT" maxlength="10"
+                                   title="Valor Costo GOB-SUNAT" class="form-control"
+                                   onkeypress="return $.f_validaInput(1, event, true ,' ')" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtmonVentaPRL">Valor Venta Libre:</label>
+                        <div class="col-md-4">
+                            <input type="number" id="txtmonVentaPRL" name="txtmonVentaPRL"
+                                   placeholder="Valor venta paralelo" maxlength="10"
+                                   title="Valor de venta paralelo" class="form-control"
+                                   onkeypress="return $.f_validaInput(1, event, true ,' ')" />
+                        </div>
+
+                        <label class="col-md-2 control-label" for="txtmonCompraPRL">Valor Costo Libre:</label>
+                        <div class="col-md-4">
+                            <input type="number" id="txtmonCompraPRL" name="txtmonCompraPRL"
+                                   placeholder="Valor Costo paralelo" maxlength="10"
+                                   title="Valor Costo paralelo" class="form-control"
+                                   onkeypress="return $.f_validaInput(1, event, true ,' ')" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtFemodi">Editado el:</label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtFemodi" name="txtFemodi"
+                                   placeholder="Fecha de la última actualización" maxlength="100"
+                                   title="Fecha de la última actualización" class="form-control" disabled />
+                        </div>
+                        <label class="col-md-2 control-label" for="txtUsumodi">
+                            Editado por:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtUsumodi" name="txtUsumodi"
+                                   placeholder="Registro modificado por" maxlength="100"
+                                   title="Registro modificado por" class="form-control" disabled />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="chkEstado">
+                            Estado:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="checkbox" id="chkEstado" name="chkEstado" class="switch-input" />
+                            <label for="chkEstado" class="col-md-8 switch-label f_label1" title="¿Activo?">
+                                <span class="toggle--on">SI</span>
+                                <span class="toggle--off">NO</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <input type="hidden" id="hddcodTipoCambio" value="@ViewBag.codTipoCambio" />
+    </div>
+</div>

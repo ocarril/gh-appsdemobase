@@ -1,0 +1,124 @@
+﻿@*/**********************************************************************
+    Programador : 
+    Fecha		: 
+    Modulo		: Gestion Comercial Importaciones
+    Archivo     : _Layout.cshtml
+    ***********************************************************************/*@
+@using System.Web.Optimization;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@using CROM.GC.Controllers.HtmlMenuHelper;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - SISTEMA DEMOSTRACIÓN</title>
+    <link href="~/Content/images/GCsystem.ico" rel="shortcut icon" type="image/x-icon" />
+
+    @Styles.Render("~/bundles/css")
+    @Styles.Render("~/Content/DropdownMenuExtra.css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryref")
+    @Scripts.Render("~/bundles/helpers")
+    @Scripts.Render("~/bundles/varios")
+
+    <script type="text/javascript">
+        var urlPath = '@Url.Content("~")';
+        function show5() {
+            if (!document.layers && !document.all && !document.getElementById)
+                return
+            var Digital = new Date()
+            var hours = Digital.getHours()
+            var minutes = Digital.getMinutes()
+            var seconds = Digital.getSeconds()
+            var days = Digital.getDate()
+            var months = Digital.getUTCMonth() + 1
+            var years = Digital.getFullYear()
+            var dn = "PM"
+            if (hours < 12)
+                dn = "AM"
+            if (hours > 12) hours = hours - 12
+            if (hours == 0) hours = 12
+            if (minutes <= 9) minutes = "0" + minutes;
+            if (seconds <= 9) seconds = "0" + seconds;
+            if (parseInt(days) < 10) days = "0" + days.toString();
+            if (parseInt(months) < 10) months = "0" + months.toString();
+
+            myclock = "<font size='2' face='Arial' >" + days + "/" + months + "/" + years + "</font>"
+            myclock = myclock + "<font size='2' face='Arial'>" +"-"+ hours + ":" + minutes + ":" + seconds + " " + dn + "</font>"
+
+            if (document.layers) {
+                document.layers.liveclock.document.write(myclock)
+                document.layers.liveclock.document.close()
+            }
+            else if (document.all)
+                liveclock.innerHTML = myclock
+            else if (document.getElementById)
+                document.getElementById("liveclock").innerHTML = myclock
+            //setTimeout("show5()", 1000)
+        }
+        window.onload = show5
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:gray;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="~/home/dashboard" class="logo">
+                    <img src="~/Content/Images/imgDemoSystem_Logo.png" style="width:45px;" id="imgLogoEmpresaIzq" />
+                </a>
+            </div>
+            @if (Html.IsValidMenu())
+            {
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav">
+
+                        @{ List<System.Demo.Tools.security.BEUsuarioPermisoResponse> menuArbol =
+                           CROM.GC.Controllers.HtmlMenuHelper.SesionUsuario.MenuRoot ??
+                           new List<System.Demo.Tools.security.BEUsuarioPermisoResponse>();
+                        }
+                        @if (menuArbol != null && menuArbol.Any())
+                        {
+                            foreach (System.Demo.Tools.security.BEUsuarioPermisoResponse menu in menuArbol)
+                            {
+                                @Html.Raw(Html.GetMenuHtml(menu.codOpcionNombre))
+                            }
+                        }
+                    </ul>
+                    @Html.Partial("_LogOnPartial")
+                </div>
+            }
+            else
+            {
+                Html.RedirectToLoginSIS();
+            }
+        </div>
+        </nav>
+
+
+        <div class="body-content">
+            @RenderBody()
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+        </div>
+
+        <footer style="text-align:center;">
+            <p>
+                <b>SISDEMO(crom) - MVC.</b> &copy; - 2009 - @DateTime.Now.Year - Todos los derechos reservados
+                @{Html.RenderAction("_VersionPartial", "Menu");}
+            </p>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,148 @@
+﻿@************************************************************************
+     Archivo    : About.cshtml
+     Propósito  : Vista que representa informaci{on acerca del sistema
+     Se asume   : N/A
+     Efectos    : N/A
+     Notas      : N/A
+     Autor      :
+     Fecha/Hora de Creación : 
+     Fecha/Hora  Modificado :
+    ************************************************************************@
+@{
+    ViewBag.Title = "Acerca de";
+}
+
+    <div class="panel panel-primary" id="dataForm">
+        <h3 class="panel-heading">Sistema de Gestion Comercial - Modulo Facturación Electrónica SUNAT</h3>
+        <div class="row  glyphicon-align-center">
+            <div class="col-md-6">
+                <table style="width:100%; border:solid; background-color:honeydew;">
+                    <tr>
+                        <th></th>
+                        <th>Sistema realizado por:</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" style="padding:10px;"><img src="~/Content/Images/imgCROMLogo.JPG" style="height:66px;" id="imgLogoEmpresaIzq" /></th>
+                        <td>Ingeniero de Sistemas: Orlando Carril R.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Teléfono: 997405565
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="panel-body">
+            <fieldset>
+                @*<legend>Información del Módulo</legend>*@
+                <div style="column-count:2;column-gap: 3em;column-rule: 1px solid #bbb;column-width: 140px;">
+                    <dl>
+                        <dt>
+                            <font color="blue" size="4"><u><b>SISTEMA->TABLAS MAESTRAS : </b></u></font>
+                        </dt>
+                        <dd>Opción que permite dar mantenimiento de tablas y registros generales del sistema.</dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>SISTEMA->PERSONAS : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento de personas o socios comerciales de la empresa como CLIENTES, PROVEEDORES, TRANSPORTISTAS, BANCOS, en general PERSONAS JURÍDICAS Y PERSONAS NATURALES
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>SISTEMA->EMPLEADOS : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a los empleados de la empresa que usa el sistema.
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>SISTEMA->TIPO DE CAMBIO : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a los costos del tipos de cambio COMPRA/VENTA por cada fecha en que se realizan operaciones comerciales/emisión de documentos
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>SISTEMA->CONFIGURAR PARÁMETROS : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a parámetros de configuración del sistema
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>EXISTENCIAS->PRODUCTOS SERVICIOS : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a PRODUCTOS/SERVICIOS que comercializa (COMPRA/VENTA) la empresa.
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u> <b>EXISTENCIAS->MARCAS/MODELOS : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento  las marcas y modelos de los productos registrados.
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>COMERCIAL->DEFINIR IMPUESTOS : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a los impuestos relacionados a SUNAT
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>COMERCIAL->ESTADO DOCUMENTOS : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a los estados de los documentos
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>COMERCIAL->PUNTO DE VENTA : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a los puntos de venta de la empresa
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>COMERCIAL->FORMA DE PAGO : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a las formas de pago
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>COMERCIAL->CONDICION VENTA-COMPRA : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a las condiciones de venta y condiciones de compra.
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>COMERCIAL->DOCUMENTO : </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite dar mantenimiento a los documentos que emitirá la empresa (COTIZACIONES/GUIA DE REMISIÓN/FACTURA ELECTRONICA/NOTA DE CREDITO).
+                        </dd>
+                        <dt>
+                            <font color="blue" size="4"><u><b>EMISIÓN-FACTURACIÓN->EMISIÓN DE DOCUMENTOS </b></u></font>
+                        </dt>
+                        <dd>
+                            Opción que permite GENERAR la emisión de documentos. La aplicación web en esta versión solo esta emitiendo por ahora:
+                            <ul>
+                                <li>FACTURA DE VENTA ELECTRÓNICA</li>
+                                <li>BOLETA DE VENTA ELECTRÓNICA</li>
+                                <li>NOTA DE CREDITO ELECTRÓNICA</li>
+                                <li>NOTA DE DÉBITO ELECTRÓNICA</li>
+                                <li>NOTA DE INGRESO (Productos con stocks)</li>
+                                <li>NOTA DE SALIDA (Productos con stocks)</li>
+                                <li>COTIZACIÓNES</li>
+                                <li>GUIA DE REMISIÓN  (Próxima versión)</li>
+                                <li>REGISTRO DE FACTURA DE COMPRAS</li>
+                            </ul>
+                        </dd>
+                    </dl>
+
+
+                </div>
+            </fieldset>
+        </div>
+
+    </div>
+
+
+
+<td rowspan="2">
+    
+</td>                      

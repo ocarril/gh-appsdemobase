@@ -1,0 +1,48 @@
+﻿@using CROM.GC.Controllers.HtmlMenuHelper
+@{
+    var usuario = SesionUsuario.objUsuario;
+}
+@if (@usuario != null)
+{
+    using (Html.BeginForm("LogOff", "AccesoCuenta", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <ul class="nav pull-right top-menu">
+            @*<li hidden>
+                <input type="hidden" value="@usuario.numRUC" id="txtNumRUCEmpresa" />
+            </li>*@
+            <li style="height:12px;">
+                <span style="color:black;font-size:small; align-items:center; padding:4px 4px 4px 4px" id="liveclock"></span>
+                <input type="hidden" value="@usuario.numRUC" id="txtNumRUCEmpresa" />
+            </li>
+            <li class="dropdown" style="lighting-color:darkgray;height:15px;">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <img alt="" src="~/content/images/UserSesion.png" style="height:15px;">
+                    <span style="color:black;font-size:smaller;">
+                        <b>
+                            @usuario.codEmpresaNombre  -   @usuario.desLogin - [@usuario.codRolNombre]
+                        </b>
+                    </span>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu extended logout" style="background-color:dimgray; padding:3px;">
+                    <li style="color:#fbeed5;">
+                        <a style="background-color: khaki; color: bisque" href="javascript:document.getElementById('logoutForm').submit()">
+                            <img src="~/Content/Images/imgExit.png" style="height:25px;" title="[ Cerrar Sesión ]" />
+                            <label style="color:black;font-size:smaller;">Cerrar Sesi&oacute;n</label>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    }
+}
+else
+{
+    <a style="background-color: gray; color: bisque" href="javascript:document.getElementById('logoutForm').submit()">
+        <img src="~/Content/Images/imgExit.png" style="height:30px;" title="[ Cerrar Sesión ]" />
+        <label style="color:black;font-size:smaller;">Cerrar Sesi&oacute;n</label>
+    </a>
+
+}

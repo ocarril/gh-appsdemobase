@@ -1,0 +1,3048 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="table1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>1.86713cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.90104cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>10.25083cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.95771cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.95771cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.0877cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.65001cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Canti_Deci">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!Cantidad.Value&gt;0,Format(Fields!Cantidad.Value,"N"),"")</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Canti_Deci</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Codi_Unid">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!Cantidad.Value&gt;0,Fields!CodigoArguUnidadMedPresen.Value,"")</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Codi_Unid</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Descripcion">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Descripcion.Value</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Descripcion</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox47">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!UnitPrecioBruto.Value&gt;0,Format(Fields!UnitPrecioBruto.Value,"0.00"),"")</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Valor_Bruto">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!UnitDescuento.Value&gt;0,Format(ROUND(Fields!UnitDescuento.Value,2),"N"),"")</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Valor_Bruto</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Valor_Venta">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!TotItemValorVenta.Value&gt;0,Format(Round(Fields!TotItemValorVenta.Value,2),"N"),"")</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Valor_Venta</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="table1_Details_Group">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CROM_GestionComercial_BusinessEntities_listaComprobanteEmisionDetalle</DataSetName>
+        <Top>5.0175cm</Top>
+        <Left>0.13cm</Left>
+        <Height>0.65001cm</Height>
+        <Width>19.02211cm</Width>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!EntidadRazonSocial.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                <Style>
+                  <FontFamily>Microsoft Sans Serif</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.12cm</Top>
+        <Left>0.28cm</Left>
+        <Height>0.53cm</Height>
+        <Width>13.1666cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Trim(First(Fields!EntidadDireccion.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"))</Value>
+                <Style>
+                  <FontFamily>Microsoft Sans Serif</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.55944cm</Top>
+        <Left>0.28cm</Left>
+        <Height>0.53cm</Height>
+        <Width>18.79cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PROFORMA</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.02868cm</Top>
+        <Left>13.62299cm</Left>
+        <Height>0.69972cm</Height>
+        <Width>5.44701cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Señores:</Value>
+                <Style>
+                  <FontFamily>Microsoft Sans Serif</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.65cm</Top>
+        <Left>0.28cm</Left>
+        <Height>0.5cm</Height>
+        <Width>1.8cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Nº: " &amp; Right(First(Fields!NumeroComprobante.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),10)</Value>
+                <Style>
+                  <FontFamily>Courier New</FontFamily>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.75cm</Top>
+        <Left>13.62299cm</Left>
+        <Height>0.75cm</Height>
+        <Width>5.44701cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=iif(String.IsNullOrEmpty(First(Fields!CodigoPersonaEntidadContactoNombre.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")),First(Fields!DocLetrasCambio.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),First(Fields!CodigoPersonaEntidadContactoNombre.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"))</Value>
+                <Style>
+                  <FontFamily>Microsoft Sans Serif</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.16cm</Top>
+        <Left>2.15056cm</Left>
+        <Height>0.5cm</Height>
+        <Width>9.03528cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!prm_EmisorUbigeo.Value &amp; ", " &amp; Day(CDate(First(Fields!FechaDeEmision.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")))&amp; " de " &amp; UCase(MonthName(Month(CDate(First(Fields!FechaDeEmision.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"))))) &amp; " de " &amp; Year(CDate(First(Fields!FechaDeEmision.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")))</Value>
+                <Style>
+                  <FontFamily>Microsoft Sans Serif</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.05cm</Top>
+        <Left>0.32cm</Left>
+        <Height>0.56cm</Height>
+        <Width>13.1266cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Atención:</Value>
+                <Style>
+                  <FontFamily>Microsoft Sans Serif</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.16cm</Top>
+        <Left>0.28cm</Left>
+        <Height>0.5cm</Height>
+        <Width>1.8cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="rectangle1">
+        <ReportItems>
+          <Textbox Name="textbox42">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Cantidad</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.15cm</Top>
+            <Left>0.19cm</Left>
+            <Height>0.5cm</Height>
+            <Width>1.58361cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox41">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Descripción</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.15cm</Top>
+            <Left>4.745cm</Left>
+            <Height>0.5cm</Height>
+            <Width>3.305cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox38">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>UM</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.15cm</Top>
+            <Left>1.95cm</Left>
+            <Height>0.5cm</Height>
+            <Width>0.77cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox34">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Sub-Total</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.15cm</Top>
+            <Left>16.8cm</Left>
+            <Height>0.5cm</Height>
+            <Width>2.14cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox32">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Val. Unitario</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.15cm</Top>
+            <Left>13.005cm</Left>
+            <Height>0.5cm</Height>
+            <Width>2.1cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox48">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Dscto%</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.15cm</Top>
+            <Left>15.255cm</Left>
+            <Height>0.5cm</Height>
+            <Width>1.35cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <DataElementOutput>ContentsOnly</DataElementOutput>
+        <Top>3.9175cm</Top>
+        <Left>0.13cm</Left>
+        <Height>0.75cm</Height>
+        <Width>19.02206cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
+        </Style>
+      </Rectangle>
+      <Textbox Name="textbox36">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Nota01.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                <Style>
+                  <FontFamily>Microsoft Sans Serif</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.73056cm</Top>
+        <Left>0.3375cm</Left>
+        <Height>0.57cm</Height>
+        <Width>18.7325cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle2">
+        <ReportItems>
+          <Textbox Name="textbox9">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=IIF(Sum(Fields!ValorTotalDescuento.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")&gt;0,"TOTAL BRUTO:","")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.61452cm</Top>
+            <Left>2.35167cm</Left>
+            <Height>0.5cm</Height>
+            <Width>4.30117cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox10">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=IIF(Sum(Fields!ValorTotalDescuento.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")&gt;0,Format(Sum(Fields!ValorTotalBruto.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),"N"),"")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.61452cm</Top>
+            <Left>7.74674cm</Left>
+            <Height>0.5cm</Height>
+            <Width>2.56778cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=IIF(Sum(Fields!ValorTotalDescuento.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")&gt;0,Format(Sum(Fields!ValorTotalDescuento.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),"N"),"")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.22035cm</Top>
+            <Left>7.74674cm</Left>
+            <Height>0.5cm</Height>
+            <Width>2.56778cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!REF_ValorTotalPrecioVentaLetras.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>7pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.77035cm</Top>
+            <Left>2.35167cm</Left>
+            <Height>0.45cm</Height>
+            <Width>16.415cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Format(Sum(Fields!ValorTotalVenta.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),"N")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.08528cm</Top>
+            <Left>16.19889cm</Left>
+            <Height>0.5cm</Height>
+            <Width>2.56778cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Format(Sum(Fields!ValorTotalImpuesto.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),"N")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.62056cm</Top>
+            <Left>16.19889cm</Left>
+            <Height>0.5cm</Height>
+            <Width>2.56778cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox14">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Format(Sum(Fields!ValorTotalPrecioVenta.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),"N")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.19111cm</Top>
+            <Left>16.19889cm</Left>
+            <Height>0.5cm</Height>
+            <Width>2.56778cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox17">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Más IGV : " &amp; ROUND(Sum(Fields!ValorIGV.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")*100,2) &amp; " %"</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.62056cm</Top>
+            <Left>10.34979cm</Left>
+            <Height>0.5cm</Height>
+            <Width>4.75521cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox18">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!REF_CodigoArguMonedaSimbolo.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.19111cm</Top>
+            <Left>15.04306cm</Left>
+            <Height>0.5cm</Height>
+            <Width>1.05cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox20">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=IIF(Sum(Fields!ValorTotalDescuento.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")&gt;0,"DESCUENTO:","")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.18507cm</Top>
+            <Left>2.35167cm</Left>
+            <Height>0.5cm</Height>
+            <Width>4.30117cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox22">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!REF_CodigoArguMonedaSimbolo.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.62056cm</Top>
+            <Left>15.04306cm</Left>
+            <Height>0.5cm</Height>
+            <Width>1.05cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox24">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=IIF(Sum(Fields!ValorTotalDescuento.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")&gt;0,First(Fields!REF_CodigoArguMonedaSimbolo.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),"")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.27035cm</Top>
+            <Left>6.5909cm</Left>
+            <Height>0.5cm</Height>
+            <Width>1.05cm</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox25">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=IIF(Sum(Fields!ValorTotalDescuento.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")&gt;0,First(Fields!REF_CodigoArguMonedaSimbolo.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),"")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.61452cm</Top>
+            <Left>6.5909cm</Left>
+            <Height>0.5cm</Height>
+            <Width>1.05cm</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox23">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!REF_CodigoArguMonedaSimbolo.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.08528cm</Top>
+            <Left>15.04306cm</Left>
+            <Height>0.5cm</Height>
+            <Width>1.05cm</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox33">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=" Valor de Venta: "</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.08528cm</Top>
+            <Left>10.34979cm</Left>
+            <Height>0.5cm</Height>
+            <Width>4.75521cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox35">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=" PRECIO TOTAL: "</Value>
+                    <Style>
+                      <FontFamily>Microsoft Sans Serif</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.19111cm</Top>
+            <Left>10.34979cm</Left>
+            <Height>0.5cm</Height>
+            <Width>4.75521cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>7.0341cm</Top>
+        <Left>0.13cm</Left>
+        <Height>2.42743cm</Height>
+        <Width>19.02206cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>#e6e6e6</BackgroundColor>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>9.87251cm</Height>
+    <Style />
+  </Body>
+  <Width>19.3675cm</Width>
+  <Page>
+    <PageHeader>
+      <Height>4.905cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="image1">
+          <Source>External</Source>
+          <Value>=First(Fields!CodigoPersonaTransporteNombre.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.08833cm</Top>
+          <Left>1.25828cm</Left>
+          <Height>2.89417cm</Height>
+          <Width>6.51262cm</Width>
+          <ToolTip>Logo de Empresa</ToolTip>
+          <Style />
+        </Image>
+        <Textbox Name="textbox43">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!prm_EmisorPropaganda.Value</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                    <FontFamily>Times New Roman</FontFamily>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>1.906cm</Top>
+          <Left>9.08646cm</Left>
+          <Height>2.25817cm</Height>
+          <Width>10.11354cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="line1">
+          <Top>4.5875cm</Top>
+          <Height>0cm</Height>
+          <Width>19.3675cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="textbox46">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>MANTENIMIENTO GENERAL Y SERVICIOS TÉCNICOS</Value>
+                  <Style>
+                    <FontFamily>Times New Roman</FontFamily>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.635cm</Top>
+          <Left>9.08646cm</Left>
+          <Height>1.03287cm</Height>
+          <Width>10.14854cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox37">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!prm_EmisorUbigeo.Value &amp; " Telf.: " &amp;  Parameters!prm_EmisorTelefon01.Value &amp; " - RPC: " &amp;  Parameters!prm_EmisorTelefon02.Value &amp; " Correo: " &amp; LCase(Parameters!prm_EmisorCorreoE.Value) &amp; " - " &amp; LCase(Parameters!prm_EmisorWebSite.Value)</Value>
+                  <Style>
+                    <FontFamily>Times New Roman</FontFamily>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>3.4875cm</Top>
+          <Left>0.01563cm</Left>
+          <Height>1cm</Height>
+          <Width>8.7cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox44">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!prm_EmisorDomicilio.Value</Value>
+                  <Style>
+                    <FontFamily>Times New Roman</FontFamily>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>3.08833cm</Top>
+          <Height>0.53cm</Height>
+          <Width>8.7cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style />
+    </PageHeader>
+    <PageFooter>
+      <Height>5.58cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Line Name="line8">
+          <Height>0cm</Height>
+          <Width>19.2cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="textbox53">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="Impreso el: ["&amp; Today() &amp; " - " &amp; TimeString() &amp; "]"</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>5.10646cm</Top>
+          <Left>9.6375cm</Left>
+          <Height>0.47354cm</Height>
+          <Width>9.6cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox39">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="-Nota : " &amp; First(Fields!Nota02.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                    <FontSize>11pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.07056cm</Top>
+          <Left>0.13cm</Left>
+          <Height>1.37313cm</Height>
+          <Width>16.605cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox28">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="CONDICIONES COMERCIALES"</Value>
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextDecoration>Underline</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>1.47896cm</Top>
+          <Left>0.13cm</Left>
+          <Height>0.6cm</Height>
+          <Width>10.24cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox29">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="- Los Precios estan expresados en : " &amp; First(Fields!CodigoArguMonedaNombre.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision").ToString().ToUpper()</Value>
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>2.11424cm</Top>
+          <Left>0.13cm</Left>
+          <Height>0.6cm</Height>
+          <Width>10.24cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox16">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="- La Forma de Pago es : " &amp; First(Fields!CondicionVentaNombre.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision").ToString().ToUpper()</Value>
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>2.74952cm</Top>
+          <Left>0.13cm</Left>
+          <Height>0.6cm</Height>
+          <Width>10.24cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox31">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="-Tiempo de Entrega es : " &amp; Parameters!prm_TiempoEntrega.Value &amp; " Dia(s)"</Value>
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>3.3848cm</Top>
+          <Left>0.13cm</Left>
+          <Height>0.6cm</Height>
+          <Width>10.24cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox19">
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!auxcodEmpleadoVendedorNombre.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                  <Style>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>3.45535cm</Top>
+          <Left>12.70626cm</Left>
+          <Height>0.45cm</Height>
+          <Width>6.07104cm</Width>
+          <ZIndex>7</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox27">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!REF_CodigoPersonaVendedorEmail.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                  <Style>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>3.94063cm</Top>
+          <Left>12.24313cm</Left>
+          <Height>0.45cm</Height>
+          <Width>6.97104cm</Width>
+          <ZIndex>8</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="line9">
+          <Top>3.49063cm</Top>
+          <Left>11.8773cm</Left>
+          <Height>0cm</Height>
+          <Width>6.75cm</Width>
+          <ZIndex>9</ZIndex>
+          <Style>
+            <Border>
+              <Style>Dashed</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="textbox51">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!REF_CodigoPersonaVendedorTelefono.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision")</Value>
+                  <Style>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>4.34063cm</Top>
+          <Left>12.23626cm</Left>
+          <Height>0.45cm</Height>
+          <Width>6.97104cm</Width>
+          <ZIndex>10</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="image2">
+          <Source>External</Source>
+          <Value>="File:\\" &amp; System.IO.Path.Combine (System.AppDomain.CurrentDomain.BaseDirectory,Parameters!prm_FirmaDeVendedor.Value)</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>1.5848cm</Top>
+          <Left>13.92817cm</Left>
+          <Height>1.8cm</Height>
+          <Width>4.05cm</Width>
+          <ZIndex>11</ZIndex>
+          <Visibility>
+            <Hidden>true</Hidden>
+          </Visibility>
+          <ToolTip>Logo de Empresa</ToolTip>
+          <Style />
+        </Image>
+        <Textbox Name="textbox30">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="-Cotización Válida hasta : " &amp; DateDiff(DateInterval.Day,First(Fields!FechaDeEmision.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),First(Fields!FechaComprobanteORIGEN.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"))+1 &amp; " DIAS."</Value>
+                  <Style>
+                    <FontFamily>Calibri</FontFamily>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>4.02007cm</Top>
+          <Left>0.13cm</Left>
+          <Height>0.6cm</Height>
+          <Width>10.2cm</Width>
+          <ZIndex>12</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox26">
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=iif(len(First(Fields!NumeroComprobanteDESTINO.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"))&gt;0,"Ref. GREM: " &amp; First(Fields!NumeroComprobanteDESTINO.Value, "CROM_GestionComercial_BusinessEntities_ComprobanteEmision"),"")</Value>
+                  <Style>
+                    <FontFamily>Microsoft Sans Serif</FontFamily>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>4.79646cm</Top>
+          <Left>0.13cm</Left>
+          <Height>0.45cm</Height>
+          <Width>6.07104cm</Width>
+          <ZIndex>13</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style />
+    </PageFooter>
+    <PageHeight>29.5cm</PageHeight>
+    <PageWidth>22cm</PageWidth>
+    <InteractiveHeight>29.7cm</InteractiveHeight>
+    <InteractiveWidth>21cm</InteractiveWidth>
+    <LeftMargin>1cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
+    <TopMargin>1cm</TopMargin>
+    <BottomMargin>1cm</BottomMargin>
+    <ColumnSpacing>0.25cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <Description>Formato FACTURAS</Description>
+  <Author>Orlando Carril Ramirez</Author>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>3c7f8fea-0e8a-4068-9989-22fa2f0eea84</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="CROM_GestionComercial_BusinessEntities_ComprobanteEmision">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="auxcodEmpleadoNombre">
+          <DataField>auxcodEmpleadoNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auxcodEmpleadoVendedorNombre">
+          <DataField>auxcodEmpleadoVendedorNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auxcodRegTipoDomicilioTransporteNombre">
+          <DataField>auxcodRegTipoDomicilioTransporteNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auxcodRegTipoEntidad">
+          <DataField>auxcodRegTipoEntidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auxcodRegTipoEntidadNombre">
+          <DataField>auxcodRegTipoEntidadNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auxcodRegUbigeoTransporteNombre">
+          <DataField>auxcodRegUbigeoTransporteNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auxCuentaBancariaPago">
+          <DataField>auxCuentaBancariaPago</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="auxEntidadNumeroDNI">
+          <DataField>auxEntidadNumeroDNI</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CHECKED_DECLARA">
+          <DataField>CHECKED_DECLARA</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="codDocumReg">
+          <DataField>codDocumReg</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="codEmpleado">
+          <DataField>codEmpleado</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="codEmpleadoVendedor">
+          <DataField>codEmpleadoVendedor</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="codGastoDeAduana">
+          <DataField>codGastoDeAduana</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguAnulacion">
+          <DataField>CodigoArguAnulacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguAnulacionNombre">
+          <DataField>CodigoArguAnulacionNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDepositoDesti">
+          <DataField>CodigoArguDepositoDesti</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDepositoDestiNombre">
+          <DataField>CodigoArguDepositoDestiNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDepositoOrigen">
+          <DataField>CodigoArguDepositoOrigen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDepositoOrigenNombre">
+          <DataField>CodigoArguDepositoOrigenNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDestinoComp">
+          <DataField>CodigoArguDestinoComp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDestinoCompNombre">
+          <DataField>CodigoArguDestinoCompNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguEstadoDocu">
+          <DataField>CodigoArguEstadoDocu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguEstadoDocuNombre">
+          <DataField>CodigoArguEstadoDocuNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguMoneda">
+          <DataField>CodigoArguMoneda</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguMonedaNombre">
+          <DataField>CodigoArguMonedaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguMotivoGuia">
+          <DataField>CodigoArguMotivoGuia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguMotivoGuiaNombre">
+          <DataField>CodigoArguMotivoGuiaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguTipoDeOperacion">
+          <DataField>CodigoArguTipoDeOperacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguTipoDeOperacionNombre">
+          <DataField>CodigoArguTipoDeOperacionNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguTipoDomicil">
+          <DataField>CodigoArguTipoDomicil</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguTipoDomicilNombre">
+          <DataField>CodigoArguTipoDomicilNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguUbigeo">
+          <DataField>CodigoArguUbigeo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobante">
+          <DataField>CodigoComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteDESTINO">
+          <DataField>CodigoComprobanteDESTINO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteDESTINONombre">
+          <DataField>CodigoComprobanteDESTINONombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteFact">
+          <DataField>CodigoComprobanteFact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteNCR">
+          <DataField>CodigoComprobanteNCR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteNDB">
+          <DataField>CodigoComprobanteNDB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteNombre">
+          <DataField>CodigoComprobanteNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteORIGEN">
+          <DataField>CodigoComprobanteORIGEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteORIGENNombre">
+          <DataField>CodigoComprobanteORIGENNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoDocumentoecun">
+          <DataField>CodigoDocumentoecun</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoParte">
+          <DataField>CodigoParte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEmpre">
+          <DataField>CodigoPersonaEmpre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEmpreNombre">
+          <DataField>CodigoPersonaEmpreNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEntidad">
+          <DataField>CodigoPersonaEntidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEntidadContacto">
+          <DataField>CodigoPersonaEntidadContacto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEntidadContactoNombre">
+          <DataField>CodigoPersonaEntidadContactoNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEntidadNombre">
+          <DataField>CodigoPersonaEntidadNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaTransporte">
+          <DataField>CodigoPersonaTransporte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaTransporteNombre">
+          <DataField>CodigoPersonaTransporteNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaTransporteRUC">
+          <DataField>CodigoPersonaTransporteRUC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPuntoVenta">
+          <DataField>CodigoPuntoVenta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPuntoVentaNombre">
+          <DataField>CodigoPuntoVentaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPuntoVentaSecun">
+          <DataField>CodigoPuntoVentaSecun</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPuntoVentaSecunNombre">
+          <DataField>CodigoPuntoVentaSecunNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoRegistroUnico">
+          <DataField>CodigoRegistroUnico</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="codRegTipoDomicilioTransporte">
+          <DataField>codRegTipoDomicilioTransporte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="codRegUbigeoTransporte">
+          <DataField>codRegUbigeoTransporte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CondicionCompra">
+          <DataField>CondicionCompra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CondicionCompraNombre">
+          <DataField>CondicionCompraNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CondicionVenta">
+          <DataField>CondicionVenta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CondicionVentaNombre">
+          <DataField>CondicionVentaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="desDireccionTransporte">
+          <DataField>desDireccionTransporte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="desTotalCaja">
+          <DataField>desTotalCaja</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="desTotalPeso">
+          <DataField>desTotalPeso</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DireccioDePartida">
+          <DataField>DireccioDePartida</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DocEsFacturable">
+          <DataField>DocEsFacturable</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="DocEsGravado">
+          <DataField>DocEsGravado</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="DocExigeDocAnexo">
+          <DataField>DocExigeDocAnexo</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="DocGuiaDeSalida">
+          <DataField>DocGuiaDeSalida</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DocLetrasCambio">
+          <DataField>DocLetrasCambio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DocOrdenDeCompra">
+          <DataField>DocOrdenDeCompra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DocPedidoAdquisicion">
+          <DataField>DocPedidoAdquisicion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EntidadDireccion">
+          <DataField>EntidadDireccion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EntidadDireccionUbigeo">
+          <DataField>EntidadDireccionUbigeo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EntidadNumeroRUC">
+          <DataField>EntidadNumeroRUC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EntidadRazonSocial">
+          <DataField>EntidadRazonSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Estado">
+          <DataField>Estado</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="FechaComprobanteORIGEN">
+          <DataField>FechaComprobanteORIGEN</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeAnulacion">
+          <DataField>FechaDeAnulacion</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeCancelacion">
+          <DataField>FechaDeCancelacion</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeDeclaracion">
+          <DataField>FechaDeDeclaracion</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeEmision">
+          <DataField>FechaDeEmision</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeEntrega">
+          <DataField>FechaDeEntrega</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeProceso">
+          <DataField>FechaDeProceso</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeRecibido">
+          <DataField>FechaDeRecibido</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeVencimiento">
+          <DataField>FechaDeVencimiento</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="indInternacional">
+          <DataField>indInternacional</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LogicoFiltro">
+          <DataField>LogicoFiltro</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Nota01">
+          <DataField>Nota01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nota02">
+          <DataField>Nota02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nota03">
+          <DataField>Nota03</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobante">
+          <DataField>NumeroComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobanteDESTINO">
+          <DataField>NumeroComprobanteDESTINO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobanteExt">
+          <DataField>NumeroComprobanteExt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobanteNCR">
+          <DataField>NumeroComprobanteNCR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobanteNDB">
+          <DataField>NumeroComprobanteNDB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobanteORIGEN">
+          <DataField>NumeroComprobanteORIGEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroDocumentoecun">
+          <DataField>NumeroDocumentoecun</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroMinuta">
+          <DataField>NumeroMinuta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroSerie">
+          <DataField>NumeroSerie</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Observaciones">
+          <DataField>Observaciones</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="perTributario">
+          <DataField>perTributario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REF_CodigoArguMonedaSimbolo">
+          <DataField>REF_CodigoArguMonedaSimbolo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REF_CodigoPersonaEntidadContactoEmail">
+          <DataField>REF_CodigoPersonaEntidadContactoEmail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REF_CodigoPersonaEntidadContactoTelefono">
+          <DataField>REF_CodigoPersonaEntidadContactoTelefono</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REF_CodigoPersonaVendedorArea">
+          <DataField>REF_CodigoPersonaVendedorArea</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REF_CodigoPersonaVendedorEmail">
+          <DataField>REF_CodigoPersonaVendedorEmail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REF_CodigoPersonaVendedorTelefono">
+          <DataField>REF_CodigoPersonaVendedorTelefono</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REF_TextoDeLeyenda">
+          <DataField>REF_TextoDeLeyenda</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REF_TotalItems">
+          <DataField>REF_TotalItems</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="REF_TotalLetras">
+          <DataField>REF_TotalLetras</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="REF_ValorTotalPrecioVentaLetras">
+          <DataField>REF_ValorTotalPrecioVentaLetras</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SegAnio">
+          <DataField>SegAnio</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SegDia">
+          <DataField>SegDia</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
+        </Field>
+        <Field Name="SegFechaCrea">
+          <DataField>SegFechaCrea</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SegFechaEdita">
+          <DataField>SegFechaEdita</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="SegMaquina">
+          <DataField>SegMaquina</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SegMes">
+          <DataField>SegMes</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
+        </Field>
+        <Field Name="SegUsuarioCrea">
+          <DataField>SegUsuarioCrea</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SegUsuarioEdita">
+          <DataField>SegUsuarioEdita</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TransporteConstancia">
+          <DataField>TransporteConstancia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TransporteLicencia">
+          <DataField>TransporteLicencia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TransporteMarca">
+          <DataField>TransporteMarca</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TransportePlaca">
+          <DataField>TransportePlaca</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ValorIGV">
+          <DataField>ValorIGV</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTipoCambioCMP">
+          <DataField>ValorTipoCambioCMP</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTipoCambioORIGEN">
+          <DataField>ValorTipoCambioORIGEN</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTipoCambioVTA">
+          <DataField>ValorTipoCambioVTA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalBruto">
+          <DataField>ValorTotalBruto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalDescuento">
+          <DataField>ValorTotalDescuento</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalHistorico">
+          <DataField>ValorTotalHistorico</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalImpuesto">
+          <DataField>ValorTotalImpuesto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalImpuestoGravada">
+          <DataField>ValorTotalImpuestoGravada</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalPrecioExtran">
+          <DataField>ValorTotalPrecioExtran</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalPrecioVenta">
+          <DataField>ValorTotalPrecioVenta</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalVenta">
+          <DataField>ValorTotalVenta</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="ValorTotalVentaGravada">
+          <DataField>ValorTotalVentaGravada</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CROM.BusinessEntities.Comercial</rd:DataSetName>
+        <rd:TableName>ComprobanteEmision</rd:TableName>
+        <rd:ObjectDataSourceType>CROM.BusinessEntities.Comercial.ComprobanteEmision, CROM.BusinessEntities.Comercial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7830f35674a3e729</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CROM_GestionComercial_BusinessEntities_Documento">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Abreviatura">
+          <DataField>Abreviatura</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CantidadCopias">
+          <DataField>CantidadCopias</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguCentroCosto">
+          <DataField>CodigoArguCentroCosto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguCentroCostoNombre">
+          <DataField>CodigoArguCentroCostoNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguComprobante">
+          <DataField>CodigoArguComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguComprobanteNombre">
+          <DataField>CodigoArguComprobanteNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDestinoComp">
+          <DataField>CodigoArguDestinoComp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDestinoCompNombre">
+          <DataField>CodigoArguDestinoCompNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguEstANUDefault">
+          <DataField>CodigoArguEstANUDefault</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguEstEMIDefault">
+          <DataField>CodigoArguEstEMIDefault</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguEstPRODefault">
+          <DataField>CodigoArguEstPRODefault</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguTipoDeOperacionDefault">
+          <DataField>CodigoArguTipoDeOperacionDefault</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguTipoDeOperacionDefaultNombre">
+          <DataField>CodigoArguTipoDeOperacionDefaultNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobante">
+          <DataField>CodigoComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteAsos">
+          <DataField>CodigoComprobanteAsos</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteAsosNombre">
+          <DataField>CodigoComprobanteAsosNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEmpre">
+          <DataField>CodigoPersonaEmpre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEmpreNombre">
+          <DataField>CodigoPersonaEmpreNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPuntoVenta">
+          <DataField>CodigoPuntoVenta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPuntoVentaNombre">
+          <DataField>CodigoPuntoVentaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Descripcion">
+          <DataField>Descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EsComprobanteFiscal">
+          <DataField>EsComprobanteFiscal</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EsComprobanteImpreso">
+          <DataField>EsComprobanteImpreso</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EsFacturadoPorLotes">
+          <DataField>EsFacturadoPorLotes</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EsGravado">
+          <DataField>EsGravado</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EsImpRetencion">
+          <DataField>EsImpRetencion</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EsNumerAutomatica">
+          <DataField>EsNumerAutomatica</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EsPFormaPago">
+          <DataField>EsPFormaPago</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EsSaleCajaDiaria">
+          <DataField>EsSaleCajaDiaria</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Estado">
+          <DataField>Estado</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ExigeDocumentoAnexo">
+          <DataField>ExigeDocumentoAnexo</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="IncidenciaEnCaja">
+          <DataField>IncidenciaEnCaja</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IncidenciaEnCtaCte">
+          <DataField>IncidenciaEnCtaCte</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IncidenciaEnStocks">
+          <DataField>IncidenciaEnStocks</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LineasComprobante">
+          <DataField>LineasComprobante</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MuestaTotalDetalle">
+          <DataField>MuestaTotalDetalle</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideAnioFiscal">
+          <DataField>PideAnioFiscal</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideCantidad">
+          <DataField>PideCantidad</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideCodigoProducto">
+          <DataField>PideCodigoProducto</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideDocumentoecun">
+          <DataField>PideDocumentoecun</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideCondicion">
+          <DataField>PideCondicion</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideCostoUnitario">
+          <DataField>PideCostoUnitario</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideCuentaContable">
+          <DataField>PideCuentaContable</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideDepoDestino">
+          <DataField>PideDepoDestino</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideDeposito">
+          <DataField>PideDeposito</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideDespachador">
+          <DataField>PideDespachador</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideDetalle">
+          <DataField>PideDetalle</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideDsctoDetalle">
+          <DataField>PideDsctoDetalle</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideFechaEntrega">
+          <DataField>PideFechaEntrega</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideFechaVencimiento">
+          <DataField>PideFechaVencimiento</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideGuiaDeSalida">
+          <DataField>PideGuiaDeSalida</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideImpuesto">
+          <DataField>PideImpuesto</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideMoneda">
+          <DataField>PideMoneda</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideMotivo">
+          <DataField>PideMotivo</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideNroExternoComp">
+          <DataField>PideNroExternoComp</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideNroExternoComp2">
+          <DataField>PideNroExternoComp2</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideObservaciones">
+          <DataField>PideObservaciones</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideOrdenDeServicio">
+          <DataField>PideOrdenDeServicio</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PidePartida">
+          <DataField>PidePartida</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PidePedidoDeAdquis">
+          <DataField>PidePedidoDeAdquis</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PidePeriodoFiscal">
+          <DataField>PidePeriodoFiscal</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PidePrecioUnitario">
+          <DataField>PidePrecioUnitario</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideReferencia01">
+          <DataField>PideReferencia01</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideReferencia02">
+          <DataField>PideReferencia02</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideTransportista">
+          <DataField>PideTransportista</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideUnidadMedida">
+          <DataField>PideUnidadMedida</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PideVendedor">
+          <DataField>PideVendedor</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="SegFechaCrea">
+          <DataField>SegFechaCrea</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SegFechaEdita">
+          <DataField>SegFechaEdita</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SegMaquina">
+          <DataField>SegMaquina</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SegUsuarioCrea">
+          <DataField>SegUsuarioCrea</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SegUsuarioEdita">
+          <DataField>SegUsuarioEdita</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DefaultCantidadDecimals">
+          <DataField>DefaultCantidadDecimals</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PideContactoEntidad">
+          <DataField>PideContactoEntidad</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CROM.BusinessEntities.Comercial</rd:DataSetName>
+        <rd:TableName>Documento</rd:TableName>
+        <rd:ObjectDataSourceType>CROM.BusinessEntities.Comercial.Documento, CROM.BusinessEntities.Comercial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CROM_GestionComercial_BusinessEntities_listaComprobanteEmisionDetalle">
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Cantidad">
+          <DataField>Cantidad</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CantidadPendente">
+          <DataField>CantidadPendente</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CantiDecimales">
+          <DataField>CantiDecimales</DataField>
+          <rd:TypeName>System.Int16</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDepositoAlm">
+          <DataField>CodigoArguDepositoAlm</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDepositoAlmNombre">
+          <DataField>CodigoArguDepositoAlmNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDestinoComp">
+          <DataField>CodigoArguDestinoComp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguDestinoCompNombre">
+          <DataField>CodigoArguDestinoCompNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguEstadoDocu">
+          <DataField>CodigoArguEstadoDocu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguEstadoDocuNombre">
+          <DataField>CodigoArguEstadoDocuNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguGarantiaProd">
+          <DataField>CodigoArguGarantiaProd</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguGarantiaProdNombre">
+          <DataField>CodigoArguGarantiaProdNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguTipoProducto">
+          <DataField>CodigoArguTipoProducto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguTipoProductoNombre">
+          <DataField>CodigoArguTipoProductoNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguUnidadMed">
+          <DataField>CodigoArguUnidadMed</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguUnidadMedNombre">
+          <DataField>CodigoArguUnidadMedNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoArguUnidadMedPresen">
+          <DataField>CodigoArguUnidadMedPresen</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoCentroCosto">
+          <DataField>CodigoCentroCosto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoCentroCostoNombre">
+          <DataField>CodigoCentroCostoNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobante">
+          <DataField>CodigoComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoComprobanteNombre">
+          <DataField>CodigoComprobanteNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoCuenta">
+          <DataField>CodigoCuenta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoCuentaNombre">
+          <DataField>CodigoCuentaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoItemDetalle">
+          <DataField>CodigoItemDetalle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoListaPrecio">
+          <DataField>CodigoListaPrecio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoListaPrecioNombre">
+          <DataField>CodigoListaPrecioNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPartida">
+          <DataField>CodigoPartida</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPartidaNombre">
+          <DataField>CodigoPartidaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEmpre">
+          <DataField>CodigoPersonaEmpre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaEmpreNombre">
+          <DataField>CodigoPersonaEmpreNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaVendedor">
+          <DataField>CodigoPersonaVendedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPersonaVendedorNombre">
+          <DataField>CodigoPersonaVendedorNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoProducto">
+          <DataField>CodigoProducto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPuntoVenta">
+          <DataField>CodigoPuntoVenta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoPuntoVentaNombre">
+          <DataField>CodigoPuntoVentaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Descripcion">
+          <DataField>Descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Escanner">
+          <DataField>Escanner</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Estado">
+          <DataField>Estado</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="EsVerificarStock">
+          <DataField>EsVerificarStock</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="FechaDeEmision">
+          <DataField>FechaDeEmision</DataField>
+          <rd:TypeName>System.Nullable`1[System.DateTime]</rd:TypeName>
+        </Field>
+        <Field Name="IncluyeIGV">
+          <DataField>IncluyeIGV</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="itemObservacion">
+          <DataField>itemObservacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NumeroComprobante">
+          <DataField>NumeroComprobante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refCodigoArguMoneda">
+          <DataField>refCodigoArguMoneda</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refCodigoArguMonedaNombre">
+          <DataField>refCodigoArguMonedaNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refCodigoArguTipoDeOperacion">
+          <DataField>refCodigoArguTipoDeOperacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refCodigoArguTipoDeOperacionNombre">
+          <DataField>refCodigoArguTipoDeOperacionNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refCodigoPersonaEntidad">
+          <DataField>refCodigoPersonaEntidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refCodigoPersonaEntidadNombre">
+          <DataField>refCodigoPersonaEntidadNombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refEntidadNumeroRUC">
+          <DataField>refEntidadNumeroRUC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refTotItemValorVentaExtran">
+          <DataField>refTotItemValorVentaExtran</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="refUbigeo">
+          <DataField>refUbigeo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="refValorTipoCambio">
+          <DataField>refValorTipoCambio</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SegFechaCrea">
+          <DataField>SegFechaCrea</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SegFechaEdita">
+          <DataField>SegFechaEdita</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="SegMaquina">
+          <DataField>SegMaquina</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SegUsuarioCrea">
+          <DataField>SegUsuarioCrea</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SegUsuarioEdita">
+          <DataField>SegUsuarioEdita</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotItemValorBruto">
+          <DataField>TotItemValorBruto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TotItemValorDscto">
+          <DataField>TotItemValorDscto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TotItemValorIGV">
+          <DataField>TotItemValorIGV</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TotItemValorVenta">
+          <DataField>TotItemValorVenta</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitDescuento">
+          <DataField>UnitDescuento</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitPrecioBruto">
+          <DataField>UnitPrecioBruto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitPrecioSinIGV">
+          <DataField>UnitPrecioSinIGV</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitValorCosto">
+          <DataField>UnitValorCosto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitValorDscto">
+          <DataField>UnitValorDscto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitValorIGV">
+          <DataField>UnitValorIGV</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UnitValorVenta">
+          <DataField>UnitValorVenta</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Valor_ITC">
+          <DataField>Valor_ITC</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CROM.BusinessEntities.Comercial</rd:DataSetName>
+        <rd:TableName>listaComprobanteEmisionDetalle</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>listaComprobanteEmisionDetalle</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>CROM.BusinessEntities.Comercial.ComprobanteEmision, CROM.BusinessEntities.Comercial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="prm_EmisorRazonSocial">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_EmisorRazonSocial</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_EmisorDomicilio">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_EmisorDomicilio</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_EmisorUbigeo">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_EmisorUbigeo</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_EmisorTelefon01">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_EmisorTelefon01</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_EmisorTelefon02">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_EmisorTelefon02</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_EmisorWebSite">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_EmisorWebSite</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_EmisorCorreoE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_EmisorCorreoE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_EmisorPropaganda">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_EmisorPropaganda</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_TiempoEntrega">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_TiempoEntrega</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="prm_FirmaDeVendedor">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>prm_FirmaDeVendedor</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="e05">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>es-PE</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>fbd2132c-4aa3-4226-a136-e1856a894bfa</rd:ReportID>
+</Report>

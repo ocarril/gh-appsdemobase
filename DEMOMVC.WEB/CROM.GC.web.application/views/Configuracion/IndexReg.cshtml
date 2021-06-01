@@ -1,0 +1,251 @@
+﻿@************************************************************************
+     Archivo    : IndexReg.cshtml
+     Propósito  : Vista para el registro de parametro de configuraciones
+     Se asume   : N/A
+     Efectos    : N/A
+     Notas      : N/A
+     Autor      : 
+     Fecha/Hora de Creación :
+     Fecha/Hora  Modificado :
+    ************************************************************************@
+@{
+    ViewBag.Title = "Registro de configuración";
+    Layout = @Url.Content("~/Views/Shared/_Layout.cshtml");
+}
+<script src="@Url.Content("~/Scripts/Views/Configuracion/IndexReg.js")" type="text/javascript"></script>
+<div class="panel panel-primary" id="dataForm">
+
+    <h3 class="panel-heading">Registro de parámetros del sistema</h3>
+
+    <div class="checkbox margin_zero">
+        <input type="button" class="btn btn-info" name="btnGuardar" id="btnGuardar" value="Guardar" title="Guardar registro" />
+        <input type="button" class="btn btn-info" name="btnRegresar" id="btnRegresar" value="Regresar" title="Regresar al listado" />
+    </div>
+    <div class="panel-body" id="loginForm">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtcodKeyConfig">
+                            Clave de Configuración:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtcodKeyConfig" name="txtcodKeyConfig"
+                                   placeholder="Key de Configuración" class="form-control" />
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="cbodesValor">
+                            Valor de la llave:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtdesValor" name="txtdesValor"
+                                   placeholder="Ingrese valor del config" class="form-control" />
+                            <select id="cbodesValor" name="cbodesValor" class="form-control"></select>
+                        </div>
+
+                        <label class="col-md-2 control-label" for="txtindOrden">
+                            Orden:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtindOrden" name="txtindOrden"
+                                   placeholder="Número de Orden" class="form-control"
+                                   onkeypress="return $.f_validaInput(1, event, true ,' ')" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtdesNombre">
+                            Nombre:
+                        </label>
+                        <div class="col-md-4">
+                            <textarea type="text" id="txtdesNombre" name="txtdesNombre" maxlength="200"
+                                      class="form-control" rows="3" placeholder="Nombre del valor">
+                            </textarea>
+                        </div>
+
+                        <label class="col-md-2 control-label" for="txtgloDescripcion">
+                            Descripción:
+                        </label>
+                        <div class="col-md-4">
+                            <textarea type="text" id="txtgloDescripcion" name="txtgloDescripcion" maxlength="200"
+                                      class="form-control" rows="3" placeholder="Descripción del valor">
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtindTipoValor">
+                            Tipo de valor:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtindTipoValor" name="txtindTipoValor" maxlength="1"
+                                   placeholder="Tipo de Valor (S/N/D/L)" title="Tipo de Valor (S/N/D/L)" class="form-control" />
+                        </div>
+
+                        <label class="col-md-2 control-label" for="txtcodTabla">
+                            Código de tabla:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtcodTabla" name="txtcodTabla" maxlength="5"
+                                   placeholder="Código de Tabla" title="Código de Tabla" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtnumNivel">
+                            N° Nivel:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="number" id="txtnumNivel" name="txtnumNivel" maxlength="1" min="0" max="4"
+                                   placeholder="Nro de Nivel" title="Nro de Nivel" class="form-control" />
+                        </div>
+
+                        <label class="col-md-2 control-label" for="txtdesGrupo">
+                            Grupo de sistema:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtdesGrupo" name="txtdesGrupo" maxlength="10"
+                                   placeholder="Grupo de sistema" title="Grupo de sistema" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="chkindActivo">
+                            Activo:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="checkbox" id="chkindActivo" name="chkindActivo" class="switch-input" />
+                            <label for="chkindActivo" class="col-md-8 switch-label f_label1" title="¿Activo?">
+                                <span class="toggle--on">SI</span>
+                                <span class="toggle--off">NO</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content:center">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtsegFechaEdita">
+                            Fecha Actualización:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtsegFechaEdita" name="txtsegFechaEdita"
+                                   placeholder="Fecha de la última actualización" maxlength="100"
+                                   title="Fecha de la última actualización" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="txtsegUsuarioEdita">
+                            Editado por:
+                        </label>
+                        <div class="col-md-4">
+                            <input type="text" id="txtsegUsuarioEdita" name="txtsegUsuarioEdita"
+                                   placeholder="Actualizado por" maxlength="100"
+                                   title="Registro modificado por" class="form-control" />
+                        </div>
+                    </div>
+                    @*
+                                <div class="boxSection">
+                                    <div class="divHorizontal">
+                        <label for="txtcodKeyConfig">Clave de Configuración</label>
+                        <input type="text" id="txtcodKeyConfig" name="txtcodKeyConfig" placeholder="Key de Configuración" />
+                    </div>
+                                <div class="divHorizontal">
+                                    <label for="txtindOrden">Orden</label>
+                                    <input type="text" placeholder="Ingrese número de Orden" id="txtindOrden" name="txtindOrden"
+                                           onkeypress="return $.f_validaInput(1, event, true ,' ')" />
+                                </div>
+                                <div class="divHorizontal">
+                                    <label for="cbodesValor">Valor de la llave</label>
+                                    <input type="text" id="txtdesValor" name="txtdesValor" placeholder="Ingrese valor del config" />
+                                    <select id="cbodesValor" name="cbodesValor"></select>
+                                </div>
+                                <div class="divHorizontal">
+                                    <label for="txtdesNombre">Nombre:</label>
+                                    <textarea id="txtdesNombre" name="txtdesNombre" maxlength="200" style="width: 250px; height: 50px;" rows="3" placeholder="Nombre del valor"></textarea>
+                                </div>
+                                <div class="divHorizontal">
+                                    <label for="txtgloDescripcion">Descripción:</label>
+                                    <textarea id="txtgloDescripcion" name="txtgloDescripcion" maxlength="500" style="width: 250px; height: 50px;" rows="3" placeholder="Descripción del valor"></textarea>
+                                </div>
+                                <div class="divHorizontal">
+                                    <label for="txtindTipoValor">Tipo de valor:</label>
+                                    <input type="text" id="txtindTipoValor" name="txtindTipoValor" placeholder="Tipo de Valor (S/N/D/L)" />
+                                </div>
+                                <div class="divHorizontal">
+                                    <label for="txtcodTabla">Código de tabla</label>
+                                    <input type="text" id="txtcodTabla" name="txtcodTabla" placeholder="Código de Tabla" maxlength="5" />
+                                </div>
+                                <div class="divHorizontal">
+                                    <label for="txtnumNivel">N# Nivel</label>
+                                    <input type="text" id="txtnumNivel" name="txtnumNivel" placeholder="Nro de Nivel" maxlength="1" />
+                                </div>
+                                <div class="divHorizontal">
+                                    <label for="txtdesGrupo">Grupo</label>
+                                    <input type="text" id="txtdesGrupo" name="txtdesGrupo" placeholder="Grupo de sistema" maxlength="10" />
+                                </div>
+                                    <div class="divHorizontal">
+                                        <label for="chkindActivo">Activo</label>
+                                        <input type="checkbox" id="chkindActivo" name="chkindActivo" />
+                                    </div>
+                                    <div class="divHorizontal">
+                                        <label for="txtsegUsuarioEdita">Actualizado por</label>
+                                        <input type="text" id="txtsegUsuarioEdita" name="txtsegUsuarioEdita" />
+                                    </div>
+                                    <div class="divHorizontal">
+                                        <label for="txtsegFechaEdita">Fecha Actualización</label>
+                                        <input type="text" id="txtsegFechaEdita" name="txtsegFechaEdita" />
+                                    </div>
+
+                                </div>*@
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <input type="hidden" id="hddcodConfiguracion" name="hddcodConfiguracion" value="@ViewBag.codConfiguracion" />
+            <input type="hidden" id="hddindTipoValor" name="hddindTipoValor" />
+        </div>
+    </div>
+
+</div>

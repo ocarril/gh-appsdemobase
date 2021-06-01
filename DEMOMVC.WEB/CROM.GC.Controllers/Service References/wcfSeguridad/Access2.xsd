@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="UsuarioAux">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codPersonaEmpresa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codPersonaEmpresaDomicilio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codPersonaEmpresaNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codPersonaRUCEmpresa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codPuntoVenta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codPuntoVentaNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codRol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codRolNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codrguPaisNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="desApellidosNombres" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="listaRolOpcion" nillable="true" type="tns:ArrayOfRolOpcionAux" />
+          <xs:element minOccurs="0" name="listaUsuarioIngreso" nillable="true" type="tns:ArrayOfUsuarioIngresoAux" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioAux" nillable="true" type="tns:UsuarioAux" />
+  <xs:complexType name="Usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clvPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codArguPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codEmpleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desApellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desCorreo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desLogin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desNombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desPregunta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desRespuesta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desTelefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="indAccesoGerencial" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indCambiaCodPersona" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indCambiaDescuento" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indCambioPrecio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indEstado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indJefeCaja" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indRestricPorPais" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indUsuarioSistema" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indVendedor" type="xs:boolean" />
+      <xs:element minOccurs="0" name="segFechaHoraCrea" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segFechaHoraEdita" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segMaquinaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segUsuarioCrea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segUsuarioEdita" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="ArrayOfRolOpcionAux">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RolOpcionAux" nillable="true" type="tns:RolOpcionAux" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRolOpcionAux" nillable="true" type="tns:ArrayOfRolOpcionAux" />
+  <xs:complexType name="RolOpcionAux">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RolOpcion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codOpcionDescripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codOpcionEnlaceURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codOpcionEnlaceWIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codOpcionNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codOpcionPadre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codRolNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="indAsignar" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RolOpcionAux" nillable="true" type="tns:RolOpcionAux" />
+  <xs:complexType name="RolOpcion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codOpcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codRol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="indEditar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indEliminar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indExporta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indImporta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indImprime" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indMenu" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indNuevo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indOtro" type="xs:boolean" />
+      <xs:element minOccurs="0" name="indVer" type="xs:boolean" />
+      <xs:element minOccurs="0" name="segFechaHoraCrea" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segFechaHoraEdita" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segMaquinaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segUsuarioCrea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segUsuarioEdita" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RolOpcion" nillable="true" type="tns:RolOpcion" />
+  <xs:complexType name="ArrayOfUsuarioIngresoAux">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioIngresoAux" nillable="true" type="tns:UsuarioIngresoAux" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioIngresoAux" nillable="true" type="tns:ArrayOfUsuarioIngresoAux" />
+  <xs:complexType name="UsuarioIngresoAux">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UsuarioIngreso">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codRolNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codSistemaNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codUsuarioNombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="desLoginActual" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioIngresoAux" nillable="true" type="tns:UsuarioIngresoAux" />
+  <xs:complexType name="UsuarioIngreso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codRol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desLogin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fecAcceso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segFechaHoraEdita" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segMaquinaOrigen" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioIngreso" nillable="true" type="tns:UsuarioIngreso" />
+  <xs:complexType name="ArrayOfUsuarioAux">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioAux" nillable="true" type="tns:UsuarioAux" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioAux" nillable="true" type="tns:ArrayOfUsuarioAux" />
+  <xs:complexType name="Sistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="indEstado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="segFechaHoraCrea" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segFechaHoraEdita" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segMaquinaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segUsuarioCrea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segUsuarioEdita" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sistema" nillable="true" type="tns:Sistema" />
+  <xs:complexType name="ArrayOfRolAux">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RolAux" nillable="true" type="tns:RolAux" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRolAux" nillable="true" type="tns:ArrayOfRolAux" />
+  <xs:complexType name="RolAux">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Rol">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codSistemaNombre" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RolAux" nillable="true" type="tns:RolAux" />
+  <xs:complexType name="Rol">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SegFechaHoraEdita" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="codRol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="indEstado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="segFechaHoraCrea" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="segMaquinaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segUsuarioCrea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="segUsuarioEdita" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rol" nillable="true" type="tns:Rol" />
+</xs:schema>

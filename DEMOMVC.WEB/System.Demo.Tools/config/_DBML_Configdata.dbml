@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BD_GC_DEMO" Class="_DBML_ConfigdataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAP01-OCARRIL\SQLEXPRESSCROM;Initial Catalog=BD_GC_DEMO;User ID=sa" SettingsObjectName="System.Demo.Tools.Properties.Settings" SettingsPropertyName="BD_GC_DEMOConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="Maestros.demo_mvc_S_Configuracion" Method="demo_mvc_S_Configuracion">
+    <Parameter Name="prm_codEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codConfiguracion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codKeyConfig" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="prm_desNombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="prm_indActivo" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="demo_mvc_S_ConfiguracionResult">
+      <Column Name="codConfiguracion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codKeyConfig" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="codTabla" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="numNivel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="indOrden" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="indTipoValor" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="desValor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="desNombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="gloDescripcion" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="indGenerico" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="desGrupo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="indActivo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="segUsuarioCrea" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="segUsuarioEdita" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="segFechaCrea" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="segFechaEdita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="segMaquina" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

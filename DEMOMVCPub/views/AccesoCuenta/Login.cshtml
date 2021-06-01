@@ -1,0 +1,52 @@
+﻿@************************************************************************
+    Archivo    : Login.cshtml
+    Propósito  : Vista para el acceso LOGIN al sistema
+    Se asume   : N/A
+    Efectos    : N/A
+    Notas      : N/A
+    Autor      : 
+    Fecha/Hora de Creación : 
+    Fecha/Hora Modificado  :
+************************************************************************@
+@using System.Web.Optimization;
+@{
+    ViewBag.Title = "Iniciar sesión";
+    Layout = @Url.Content("~/Views/Shared/_Layoutlogin.cshtml");
+}
+
+<div class="login-box">
+
+    <img class="avatar" src="@Url.Content("~/Content/images/imgDemoSystem_Logo.png")" alt="Logo Empresa" />
+    <h1> Inicio de sesión</h1>
+    @using (Html.BeginForm())
+    {
+        //CUENTA DE USUARIO
+        <label for="txtUsuario">Usuario:</label>
+        <input type="text" id="txtUsuario"
+               name="txtUsuario" maxlength="40"
+               placeholder="Ingresar cuenta de usuario"
+               autocomplete="off" />
+
+        //CONTRASEÑA DE USUARIO
+        <label for="txtContrasenia"> Contraseña:</label>
+        <input type="password" id="txtContrasenia"
+               name="txtContrasenia" maxlength="20"
+               placeholder="Ingresar contraseña" />
+
+        <input type="button" value="Iniciar sesión" id="btnIngresar" name="btnIngresar" />
+
+        <a href="#" id="chkOlvidoContrasenia" hidden> ¿Olvidó su contraseña?</a> <br />
+        <a href="#" id="chkOlvidoContrasenia" hidden> ¿Registrar nueva cuenta de usuario?</a>
+
+    }
+</div>
+<div>
+    <input type="hidden" id="hddRutaApiSeguridad" name="hddRutaApiSeguridad" value="@ViewBag.URLAPI_Seguridad" />
+    <input type="hidden" id="hddRutaApiComercial" name="hddRutaApiComercial" value="@ViewBag.URLAPI_Comercial" />
+    <input type="hidden" id="hddRutaAppComercial" name="hddRutaAppComercial" value="@ViewBag.URLAPP_Comercial" />
+</div>
+
+
+@section scripts{
+    @Scripts.Render("~/Scripts/jsloginpage");
+}

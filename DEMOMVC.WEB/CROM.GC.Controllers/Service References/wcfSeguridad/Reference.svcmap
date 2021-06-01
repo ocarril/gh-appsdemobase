@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9589573d-bbbe-477b-a501-eccaad6a1ed3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1504/Access.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Access.wsdl" MetadataType="Wsdl" ID="f028d4d9-76b4-4f98-a5ab-5be139563947" SourceId="1" SourceUrl="http://localhost:1504/Access.svc?wsdl" />
+    <MetadataFile FileName="Access.xsd" MetadataType="Schema" ID="f4a5132d-3b2b-42de-8633-2f4aa3d3f58b" SourceId="1" SourceUrl="http://localhost:1504/Access.svc?xsd=xsd1" />
+    <MetadataFile FileName="Access1.xsd" MetadataType="Schema" ID="2c826a30-e20e-400c-8c0a-b7cc3adb0e82" SourceId="1" SourceUrl="http://localhost:1504/Access.svc?xsd=xsd0" />
+    <MetadataFile FileName="Access.disco" MetadataType="Disco" ID="a3bcb4b3-3c90-41f1-b20d-f54c7c2eaead" SourceId="1" SourceUrl="http://localhost:1504/Access.svc?disco" />
+    <MetadataFile FileName="Access2.xsd" MetadataType="Schema" ID="20d9b258-e58b-44c2-b013-98632b2e7bec" SourceId="1" SourceUrl="http://localhost:1504/Access.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

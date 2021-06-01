@@ -1,0 +1,146 @@
+﻿@************************************************************************
+     Archivo    : DocumentoEstado.cshtml
+     Propósito  : Vista para el listado de DOCUMENTO ESTADO
+     Se asume   : N/A
+     Efectos    : N/A
+     Notas      : N/A
+     Autor      : 
+     Fecha/Hora de Creación : 
+     Fecha/Hora Modificado  :
+    ************************************************************************@
+@{
+    ViewBag.Title = "Listado de Estados de Documentos";
+    Layout = @Url.Content("~/Views/Shared/_Layout.cshtml");
+}
+
+<script src="@Url.Content("~/Scripts/Views/Comercial/DocumentoEstado.js")" type="text/javascript"></script>
+@*<script src="@Url.Content("~/bndlS/documstate")" type="text/javascript"></script>*@
+
+<div class="panel panel-primary" id="dataForm">
+    <h3 class="panel-heading">Listado de estados de documentos</h3>
+    <div class="checkbox margin_zero">
+        <label>
+            <input type="button" class="btn btn-info" name="btnNuevo" id="btnNuevo" value="Nuevo" title="Nuevo registro" />
+            <input type="button" class="btn btn-info" name="btnBuscar" id="btnBuscar" value="Buscar" title="Realizar búsqueda" />
+            <input type="button" class="btn btn-info" name="btnEliminar" id="btnEliminar" value="Eliminar" title="Eliminar registros" />
+            <input type="button" class="btn btn-info" name="btnLimpiar" id="btnLimpiar" value="Limpiar" title="Limpiar parametros" />
+            <input type="button" class="btn btn-info" name="btnSalir" id="btnSalir" value="Salir" title="Salir" />
+        </label>
+    </div>
+
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div class="btn-group">
+                <label for="txtfecInicio">
+                    Documento:
+                    @Html.DropDownList("cboDocumentos", null, new { @id = "cboDocumentos", @class = "form-control", @style = "width:220px" })
+
+                </label>
+            </div>
+
+            <div class="btn-group">
+                <label for="txtfecInicio">
+                    Estado:
+                    @Html.DropDownList("cboEstados", null, new { @id = "cboEstados", @class = "form-control", @style = "width:220px" })
+
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group" id="divLista">
+            <table id="gridEstados"></table>
+            <div id="pagerEstados">
+            </div>
+        </div>
+
+        <div id="popupVentana" class="capaOcultar">
+            <fieldset>
+                <div class="row">
+                    <div class="col-md-12">
+                        <section id="loginForm">
+                            <div class="form-horizontal">
+
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="cboDocumentoReg">
+                                        Tipo de documento:<em>(*)</em>
+                                    </label>
+                                    <div class="col-md-7">
+                                        <select id="cboDocumentoReg" name="cboDocumentoReg" class="form-control"></select>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="cboEstadoReg">
+                                        Estado de documento:<em>(*)</em>
+                                    </label>
+                                    <div class="col-md-7">
+                                        <select id="cboEstadoReg" name="cboEstadoReg" class="form-control"></select>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="txtcodEstado">
+                                        Nº Estado/Orden:
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="range" id="txtcodEstado" name="txtcodEstado" min="1"
+                                               value="1" max="10" step="1" class="form-control" onchange="$.fnu_MostrarValor(this.value)" />
+                                        <span id="valLongitud"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="chkindActivo">
+                                        Activo:
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="checkbox" id="chkindActivo" name="chkindActivo" class="switch-input" />
+                                        <label for="chkindActivo" class="col-md-8 switch-label f_label1" title="¿Activo?">
+                                            <span class="toggle--on">SI</span>
+                                            <span class="toggle--off">NO</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="txtsegUsuarioEdita">
+                                        Editado por:
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="txtsegUsuarioEdita" name="txtsegUsuarioEdita"
+                                               placeholder="Registro modificado por" maxlength="100"
+                                               title="Registro modificado por" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="txtsegFechaEdita">
+                                        Editado el:
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="txtsegFechaEdita" name="txtsegFechaEdita"
+                                               placeholder="Fecha de la última actualización" maxlength="100"
+                                               title="Fecha de la última actualización" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div>
+            <input type="hidden" id="hddValorTimeout" name="hddValorTimeout" value="@ViewBag.ValorTimeout" />
+            <input type="hidden" id="hddcodDocumentoEstado" name="hddcodDocumentoEstado" />
+
+            <input type="hidden" id="hddMensajeError" name="hddMensajeError" value="@ViewBag.MensajeError" />
+            <input type="hidden" id="hddnomController" name="hddnomController" value="@ViewBag.nomController" />
+            <input type="hidden" id="hddnomAction" name="hddnomAction" value="@ViewBag.nomAction" />
+        </div>
+    </div>
+
+</div>

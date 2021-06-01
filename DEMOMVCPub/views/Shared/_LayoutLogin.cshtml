@@ -1,0 +1,27 @@
+﻿@*/**********************************************************************
+    Programador : 
+    Fecha		: 
+    Modulo		: Gestion Comercial Importaciones
+    Archivo     : _LayoutLogin.cshtml
+    ***********************************************************************/*@
+@using System.Web.Optimization;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>@ViewBag.Title - SISFAC Gestión Comercial CROM - Facturación electrónica</title>
+    <link href="~/Content/images/GCsystem.ico" rel="shortcut icon" type="image/x-icon" />
+    
+    @Styles.Render("~/styles/stlogin")
+
+</head>
+<body>
+
+    @Scripts.Render("~/Scripts/jslogin")
+
+    @RenderBody()
+
+</body>
+@RenderSection("scripts", required: false)
+</html>

@@ -1,0 +1,407 @@
+﻿body {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+.Txt_container {
+    align-items: flex-start | flex-end | center | baseline | stretch;
+}
+
+
+/*css no-sass*/
+
+
+.switch-input {
+    display: none;
+}
+
+.switch-label {
+    position: relative;
+    display: inline-block;
+    min-width: 112px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: left;
+    margin: 0px;
+    padding: 0px 0 0px 44px;
+}
+
+    .switch-label:before, .switch-label:after {
+        content: "";
+        position: absolute;
+        margin: 0;
+        outline: 0;
+        top: 50%;
+        -ms-transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .switch-label:before {
+        left: 1px;
+        width: 34px;
+        height: 14px;
+        background-color: #cc4b44;
+        border-radius: 8px;
+    }
+
+    .switch-label:after {
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: #95151c;
+        border-radius: 50%;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+    }
+
+    .switch-label .toggle--on {
+        display: none;
+    }
+
+    .switch-label .toggle--off {
+        display: inline-block;
+    }
+
+.switch-input:checked + .switch-label:before {
+    background-color: #ffff68;
+}
+
+.switch-input:checked + .switch-label:after {
+    background-color: #ffda30;
+    -ms-transform: translate(80%, -50%);
+    -webkit-transform: translate(80%, -50%);
+    transform: translate(80%, -50%);
+}
+
+.switch-input:checked + .switch-label .toggle--on {
+    display: inline-block;
+}
+
+.switch-input:checked + .switch-label .toggle--off {
+    display: none;
+}
+
+.btn-success {
+    width: 90px;
+}
+
+.btn-info {
+    width: 90px;
+}
+
+.capaOcultar {
+    display: none;
+}
+
+
+.f_g_b_estado_1 {
+    padding: 5px 12px;
+    font-weight: normal;
+    font-family: "Roboto Condensed";
+    font-size: 0.75em !important;
+    line-height: normal;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    background-color: #92a501 15%;
+    background-image: -webkit-linear-gradient(-180deg, #92a501 15%, #657201 45%);
+    background-image: -moz-linear-gradient(-180deg, #92a501 15%, #657201 45%);
+    background-image: -o-linear-gradient(-180deg, #92a501 15%, #657201 45%);
+    background-image: -ms-linear-gradient(-180deg, #92a501 15%, #657201 45%);
+    background-image: linear-gradient(-180deg, #92a501 15%, #657201 45%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$inicio, endColorstr=$fin,GradientType=0 );
+    border: 1px solid #131415;
+    color: #ffffff;
+}
+
+
+.f_g_b_estado_4 {
+    padding: 5px 12px;
+    font-weight: normal;
+    font-family: "Roboto Condensed";
+    font-size: 0.75em !important;
+    line-height: normal;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    background-color: #095678 15%;
+    background-image: -webkit-linear-gradient(-180deg, #af1d0a 15%, #7f1507 45%);
+    background-image: -moz-linear-gradient(-180deg, #af1d0a 15%, #7f1507 45%);
+    background-image: -o-linear-gradient(-180deg, #af1d0a 15%, #7f1507 45%);
+    background-image: -ms-linear-gradient(-180deg, #af1d0a 15%, #7f1507 45%);
+    background-image: linear-gradient(-180deg, #af1d0a 15%, #7f1507 45%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$inicio, endColorstr=$fin,GradientType=0 );
+    border: 1px solid #131415;
+    color: #ffffff;
+}
+
+
+.f_g_b_estado_5 {
+    padding: 5px 12px;
+    font-weight: normal;
+    font-family: "Roboto Condensed";
+    font-size: 0.75em !important;
+    line-height: normal;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    background-color: #095678 15%;
+    background-image: -webkit-linear-gradient(-180deg, #e5ac0e 15%, #e8ac40 45%);
+    background-image: -moz-linear-gradient(-180deg, #e5ac0e 15%, #ed9e3e 45%);
+    background-image: -o-linear-gradient(-180deg, #e5ac0e 15%, #ef9f49 45%);
+    background-image: -ms-linear-gradient(-180deg, #e5ac0e 15%, #eea92e 45%);
+    background-image: linear-gradient(-180deg, #e5ac0e 15%, #eb6f30 45%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$inicio, endColorstr=$fin,GradientType=0 );
+    border: 1px solid #131415;
+    color: #ffffff;
+}
+
+
+/*#exTab1 .tab-content {
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+}
+*/
+#exTab2 h3 {
+    /*color: white;
+    background-color: #428bca;
+    padding: 5px 15px;*/
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+}
+
+logo-empresa-abajo-derecha {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+}
+
+/* remove border radius for the tab */
+
+/*#exTab1 .nav-pills > li > a {
+    border-radius: 0;
+    border: 1px solid #999;
+}*/
+
+/* change border radius for the tab , apply corners on top*/
+
+/*#exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 4px 4px;
+}
+
+#exTab3 .tab-content {
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+}*/
+
+
+#divCabeceraDocumento {
+    background-color: #b7b4b4;
+    /*height: 200px;
+    width: 200px;*/
+    padding: 10px;
+    /*para Firefox*/
+    -moz-border-radius: 15px 15px 15px 15px;
+    /*para Safari y Chrome*/
+    -webkit-border-radius: 15px 15px 15px 15px;
+    /*para IE */
+    behavior: url(border.htc);
+    /* para Opera */
+    border-radius: 10px 10px 10px 10px;
+}
+
+#divTotalesDocumento {
+    background-color: #b7b4b4;
+    /*height: 200px;
+    width: 200px;*/
+    padding: 10px;
+    /*para Firefox*/
+    -moz-border-radius: 15px 15px 15px 15px;
+    /*para Safari y Chrome*/
+    -webkit-border-radius: 15px 15px 15px 15px;
+    /*para IE */
+    behavior: url(border.htc);
+    /* para Opera */
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.formatValorSoles {
+    color: darkgoldenrod;
+    font-size: 18px;
+    text-align: right;
+}
+
+.formatValorDolar {
+    color: green;
+    font-size: 18px;
+    text-align: right;
+}
+
+.formatDocumTotales {
+    color: blue;
+    font-size: 18px;
+    text-align:right;
+}
+
+.formatDocumResaltado {
+    font-size: x-large;
+    text-align: right;
+    /*font-style: initial;*/
+    font-weight: bold;
+    color: darkred;
+}
+
+.formatDocumDatos {
+    color: blue;
+    /*font-size: 25px;*/
+    text-align: left;
+}
+
+.formatDocumDatos {
+    color: blue;
+    /*font-size: 25px;*/
+    text-align: left;
+}
+
+.formatEmpresaDatos {
+    color: blue;
+    font-size: 20px;
+    text-align: left;
+    font-style: normal;
+    font-family: 'Berlin Sans FB';
+    /*font-weight: bold;*/
+}
+
+
+
+
+
+.top-nav .icon-user i {
+    height: 33px;
+    width: 33px;
+    line-height: 33px;
+    display: inline-block;
+    font-size: 1.7em;
+    padding-left: 10px;
+}
+
+.top-nav .icon-user .usernamex {
+    color: #650d0d;
+    font-size: 13px;
+    position: relative;
+    top: -5px;
+   
+}
+
+.top-nav .icon-user .caret {
+    position: relative;
+    top: -4px;
+    color: #fbeed5;
+}
+
+
+
+.top-nav ul.top-menu > li > a {
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    padding: 2px 10px;
+    background: none;
+    margin-right: 0;
+    border: 1px solid #F6F6F6;
+    background: #696868;
+}
+
+.top-nav ul.top-menu > li.language > a {
+    margin-top: -2px;
+    padding: 4px 12px;
+    line-height: 20px;
+}
+
+    .top-nav ul.top-menu > li.language > a img {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        width: 18px;
+    }
+
+.top-nav ul.top-menu > li.language ul.dropdown-menu li img {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    width: 18px;
+}
+
+.top-nav ul.top-menu > li {
+    margin-left: 10px;
+}
+
+    .top-nav ul.top-menu > li > a:hover,
+    .top-nav ul.top-menu > li > a:focus {
+        border: 1px solid #8e8a8a;
+        background: #5e5c5c !important;
+        border-radius: 100px;
+        -webkit-border-radius: 100px;
+    }
+
+.top-nav .dropdown-menu.extended.logout {
+    top: 50px;
+}
+
+.top-nav .nav .caret {
+    border-bottom-color: #595b5f;
+    border-top-color: #616267;
+}
+
+.top-nav ul.top-menu > li > a:hover .caret {
+    border-bottom-color: #000;
+    border-top-color: #000;
+}
+
+
+.divDashBoard {
+    /*border: 1px solid #696868;red  green*/
+    border-color: lightblue;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    /*border: 10px outset #696868;*/
+    background-color: grey;
+}

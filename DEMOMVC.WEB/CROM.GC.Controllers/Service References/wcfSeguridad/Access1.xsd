@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1504/Access.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" />
+  <xs:element name="UserRolOptions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prm_LoginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_CodigoRol" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_CodigoSistema" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRolOptionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" minOccurs="0" name="UserRolOptionsResult" nillable="true" type="q1:UsuarioAux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmEstado" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" minOccurs="0" name="ListUsuarioResult" nillable="true" type="q2:ArrayOfUsuarioAux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSistema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prm_CodigoSistema" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSistemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" minOccurs="0" name="FindSistemaResult" nillable="true" type="q3:Sistema" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRolUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prm_LoginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_CodigoSistema" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRolUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" minOccurs="0" name="ListRolUsuarioResult" nillable="true" type="q4:ArrayOfRolAux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prm_CodigoSistema" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" minOccurs="0" name="ListRolResult" nillable="true" type="q5:ArrayOfRolAux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetectLoginPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prm_LoginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetectLoginPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DetectLoginPasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetectLoginPasswordExterno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prm_LoginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetectLoginPasswordExternoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DetectLoginPasswordExternoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prm_LoginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_NuevoPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_Externo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePasswordRec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prm_LoginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_NuevoPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_SegMaquinaOrigen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_SegUsuarioEdita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prm_Mail" type="xs:boolean" />
+        <xs:element minOccurs="0" name="prm_Externo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePasswordRecResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePasswordRecResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListUsuarioIngreso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="p_codUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_codSistema" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_codRol" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="p_fecInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="p_fecFinal" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListUsuarioIngresoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" minOccurs="0" name="ListUsuarioIngresoResult" nillable="true" type="q6:ArrayOfUsuarioIngresoAux" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUsuarioIngreso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/CROM.Seguridad.BussinesEntities" minOccurs="0" name="p_UsuarioIngreso" nillable="true" type="q7:UsuarioIngreso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUsuarioIngresoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUsuarioIngresoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BD_GC_DEMO" Class="_DBMLDataComercialDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAP01-OCARRIL\SQLEXPRESSCROM;Initial Catalog=BD_GC_DEMO;User ID=sa" SettingsObjectName="System.Demo.DataAccess.Properties.Settings" SettingsPropertyName="BD_GC_DEMOConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="GestionComercial.demo_mvc_U_TipoDeCambio" Method="demo_mvc_U_TipoDeCambio">
+    <Parameter Name="prm_codEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codTipoCambio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_FechaProceso" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="prm_CodigoArguMoneda" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_CambioCompraGOB" Type="System.Decimal" DbType="Decimal(13,5)" />
+    <Parameter Name="prm_CambioVentasGOB" Type="System.Decimal" DbType="Decimal(13,5)" />
+    <Parameter Name="prm_CambioCompraPRL" Type="System.Decimal" DbType="Decimal(13,5)" />
+    <Parameter Name="prm_CambioVentasPRL" Type="System.Decimal" DbType="Decimal(13,5)" />
+    <Parameter Name="prm_Estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="prm_SegUsuarioEdita" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="prm_SegMaquina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_D_DocumentoEstado" Method="demo_mvc_D_DocumentoEstado">
+    <Parameter Name="prm_codDocumentoEstado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codRegDocumento" Type="System.String" DbType="VarChar(17)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_D_TipoDeCambio" Method="demo_mvc_D_TipoDeCambio">
+    <Parameter Name="prm_codEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codTipoCambio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_I_DocumentoEstado" Method="demo_mvc_I_DocumentoEstado">
+    <Parameter Name="prm_codDocumentoEstado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="prm_codRegDocumento" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_codRegEstado" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_codEstado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_indActivo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="prm_segUsuarioCrea" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_I_TipoDeCambio" Method="demo_mvc_I_TipoDeCambio">
+    <Parameter Name="prm_codTipoCambio" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="prm_codEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_FechaProceso" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="prm_CodigoArguMoneda" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_CambioCompraGOB" Type="System.Decimal" DbType="Decimal(13,5)" />
+    <Parameter Name="prm_CambioVentasGOB" Type="System.Decimal" DbType="Decimal(13,5)" />
+    <Parameter Name="prm_CambioCompraPRL" Type="System.Decimal" DbType="Decimal(13,5)" />
+    <Parameter Name="prm_CambioVentasPRL" Type="System.Decimal" DbType="Decimal(13,5)" />
+    <Parameter Name="prm_Estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="prm_SegUsuarioCrea" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="prm_SegMaquina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_S_DocumentoEstado" Method="demo_mvc_S_DocumentoEstado">
+    <Parameter Name="prm_codDocumentoEstado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codRegDocumento" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_codRegEstado" Type="System.String" DbType="VarChar(17)" />
+    <ElementType Name="demo_mvc_S_DocumentoEstadoResult">
+      <Column Name="codDocumentoEstado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codRegDocumento" Type="System.String" DbType="VarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="codRegDocumentoNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="codRegEstado" Type="System.String" DbType="VarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="codRegEstadoNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="codEstado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="indActivo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="segUsuarioCrea" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="segUsuarioEdita" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="segFechaCrea" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="segFechaEdita" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="segMaquinaEdita" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_S_DocumentoEstado_Paged" Method="demo_mvc_S_DocumentoEstado_Paged">
+    <Parameter Name="prm_NumPagina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_TamPagina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_OrdenPor" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="prm_OrdenTipo" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="prm_codDocumentoEstado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codRegDocumento" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_codRegEstado" Type="System.String" DbType="VarChar(17)" />
+    <ElementType Name="demo_mvc_S_DocumentoEstado_PagedResult">
+      <Column Name="TOTALROWS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROWNUM" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="codDocumentoEstado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codRegDocumento" Type="System.String" DbType="VarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="codRegDocumentoNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="codRegEstado" Type="System.String" DbType="VarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="codRegEstadoNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="codRegEstadoColor" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="codEstado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="indActivo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="segUsuarioCrea" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="segFechaCrea" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="segUsuarioEdita" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="segFechaEdita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="segMaquina" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_S_TipoDeCambio" Method="demo_mvc_S_TipoDeCambio">
+    <Parameter Name="prm_codEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codTipoCambio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_FechaProcesoINI" Type="System.String" DbType="Char(8)" />
+    <Parameter Name="prm_FechaProcesoFIN" Type="System.String" DbType="Char(8)" />
+    <Parameter Name="prm_CodigoArguMoneda" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_Estado" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="demo_mvc_S_TipoDeCambioResult">
+      <Column Name="codTipoCambio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaProceso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoArguMoneda" Type="System.String" DbType="VarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoArguMonedaNombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CambioCompraGOB" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioVentasGOB" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioCompraPRL" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioVentasPRL" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SegUsuarioCrea" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SegUsuarioEdita" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SegFechaCrea" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SegFechaEdita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SegMaquina" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_U_DocumentoEstado" Method="demo_mvc_U_DocumentoEstado">
+    <Parameter Name="prm_codDocumentoEstado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_codRegDocumento" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_codRegEstado" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_codEstado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_indActivo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="prm_segUsuarioEdita" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_S_TipoDeCambio_Paged" Method="demo_mvc_S_TipoDeCambio_Paged">
+    <Parameter Name="prm_NumPagina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_TamPagina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_OrdenPor" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="prm_OrdenTipo" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="prm_codEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_FechaProcesoINI" Type="System.String" DbType="Char(8)" />
+    <Parameter Name="prm_FechaProcesoFIN" Type="System.String" DbType="Char(8)" />
+    <Parameter Name="prm_CodigoArguMoneda" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_Estado" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="demo_mvc_S_TipoDeCambio_PagedResult">
+      <Column Name="codTipoCambio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaProceso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoArguMoneda" Type="System.String" DbType="VarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoArguMonedaNombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CambioCompraGOB" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioVentasGOB" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioCompraPRL" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioVentasPRL" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SegUsuarioCrea" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SegUsuarioEdita" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SegFechaCrea" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SegFechaEdita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SegMaquina" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTALROWS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROWNUM" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="GestionComercial.demo_mvc_S_TipoDeCambio_Ultimo" Method="demo_mvc_S_TipoDeCambio_Ultimo">
+    <Parameter Name="prm_codEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prm_CodigoArguMoneda" Type="System.String" DbType="VarChar(17)" />
+    <Parameter Name="prm_Estado" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="demo_mvc_S_TipoDeCambio_UltimoResult">
+      <Column Name="codTipoCambio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaProceso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoArguMoneda" Type="System.String" DbType="VarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoArguMonedaNombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CambioCompraGOB" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioVentasGOB" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioCompraPRL" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="CambioVentasPRL" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SegUsuarioCrea" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SegUsuarioEdita" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SegFechaCrea" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SegFechaEdita" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SegMaquina" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

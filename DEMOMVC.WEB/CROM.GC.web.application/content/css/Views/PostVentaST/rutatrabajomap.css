@@ -1,0 +1,180 @@
+﻿#divFiltros {
+    margin-bottom: 8px;
+}
+
+/*#divLeyendaGestor {
+    margin-bottom: 8px;
+}*/
+
+/*#divLeyendaGestor > div {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+    #divLeyendaGestor > div > .icono {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px 5px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+    }
+
+    #divLeyendaGestor > div > .texto {
+        font-size: 0.7em;
+        display: inline-block;
+        vertical-align: middle;
+    }*/
+
+#divProgramacion {
+    width: 100%;
+    position: relative;
+}
+
+#divVisitas {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 9999;
+    background-color: #ffffff;
+    font-size: 0.7em;
+    width: 250px;
+    height: 450px;
+    overflow: auto;
+    padding: 1px 7px;
+    box-sizing: border-box;
+    border: 3px solid #767676;
+}
+
+#divContenedorMap {
+    width: 100%;
+}
+
+#divProgramacion > div {
+    display: inline-block;
+}
+
+#mapRutaTrabajo {
+    width: 100%;
+    height: 460px;
+}
+
+.cabVisitaRecurso {
+    margin-top: 10px;
+    border-top: 2px solid #767676;
+    padding-top: 8px;
+}
+
+    .cabVisitaRecurso:first-child {
+        border-top: 0px none #767676;
+        padding-top: 0;
+    }
+
+    .cabVisitaRecurso > .icono {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px 5px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+        /*vertical-align:text-top*/
+    }
+
+    .cabVisitaRecurso > .texto {
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+
+.detVisita {
+    margin-top: 5px;
+    border-top: 1px solid silver;
+     background-color:#CFD4CF;
+}
+
+    .detVisita.selected {
+        background-color: #FDEC6D;
+    }
+
+    .detVisita > div {
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
+
+    .detVisita > .datos {
+        width: 155px;
+        cursor: pointer;
+       
+    }
+
+    .detVisita > .mover {
+        width: 45px;
+    }
+
+        .detVisita > .mover > div {
+            display: inline-block;
+        }
+
+        .detVisita > .mover > .up, .detVisita > .mover > .down {
+            width: 18px;
+            height: 18px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 18px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .detVisita > .mover > .up {
+            background-image: url(../../images/icons/arrow-up.png);
+            margin-right: 2px;
+        }
+
+        .detVisita > .mover > .down {
+            background-image: url(../../images/icons/arrow-down.png);
+        }
+
+.infowindow {
+    font-size: 0.85em;
+}
+
+    .infowindow > .datos > div {
+        padding-top: 3px;
+        padding-bottom: 2px;
+    }
+
+    .infowindow > .datos > .infowindowRow > div {
+        display: inline-block;
+    }
+
+    .infowindow > .datos > .infowindowRow > .etiqueta {
+        font-weight: bold;
+    }
+
+    .infowindow > .datos > .titulo, .infowindow > .reasignar > .titulo {
+        background-color: #003984;
+        color: #ffffff;
+        padding: 3px 3px;
+        font-weight: bold;
+    }
+
+    .infowindow > .reasignar {
+        margin-top: 10px;
+    }
+
+        .infowindow > .reasignar > div {
+            margin-top: 10px;
+        }
+
+        .infowindow > .reasignar > .selreasig > div {
+            display: inline-block;
+        }
+
+        .infowindow > .reasignar > .selreasig > .icono {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px 5px;
+            vertical-align: middle;
+            /*margin-right: 3px;*/
+        }
